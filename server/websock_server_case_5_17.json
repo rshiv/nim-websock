@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Repeated 2x: Continuation Frame with FIN = true (where there is nothing to continue), then text Message fragmented into 2 fragments.",
    "droppedByMe": false,
-   "duration": 0,
+   "duration": 1,
    "expectation": "The connection is failed immediately, since there is no message to continue.",
    "expected": {
       "OK": []
@@ -21,8 +21,8 @@
       "requireClean": false
    },
    "failedByMe": false,
-   "httpRequest": "GET /ws HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8888\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: SdUFsjmX5z5daD/XsKKiqw==\r\nSec-WebSocket-Version: 13\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Fri, 16 Jul 2021 05:21:58 GMT\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: AuAt8B92X+LQxcTGnpFMUG3y9Jc=\r\n\r\n",
+   "httpRequest": "GET /ws HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8888\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: t4uECIzJ0hwm7vZSwnfFJg==\r\nSec-WebSocket-Version: 13\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Fri, 16 Jul 2021 17:30:47 GMT\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: PzeONVyjR/mV/IEIJ+8GIGB0rfY=\r\n\r\n",
    "id": "5.17",
    "isServer": false,
    "localCloseCode": null,
@@ -38,7 +38,7 @@
    "rxOctetStats": {
       "166": 1
    },
-   "started": "2021-07-16T05:21:58.544Z",
+   "started": "2021-07-16T17:30:47.039Z",
    "trafficStats": null,
    "txFrameStats": {
       "0": 4,
@@ -66,7 +66,7 @@
          "RO",
          [
             166,
-            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a204672692c203136204a756c20323032312030353a32313a35 ..."
+            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a204672692c203136204a756c20323032312031373a33303a34 ..."
          ]
       ],
       [
@@ -78,7 +78,7 @@
          0,
          true,
          0,
-         "b46e1798",
+         "1ed59bfb",
          null,
          null,
          false
@@ -87,7 +87,7 @@
          "TO",
          [
             15,
-            "8089b46e1798d21c76ffd90b79ec85"
+            "80891ed59bfb78a7fa9c73b0f58f2f"
          ],
          false
       ],
@@ -100,7 +100,7 @@
          1,
          false,
          0,
-         "06ea4744",
+         "7ff1a5e8",
          null,
          null,
          false
@@ -109,7 +109,7 @@
          "TO",
          [
             15,
-            "018906ea4744609826236b8f293034"
+            "01897ff1a5e81983c48f1294cb9c4d"
          ],
          false
       ],
@@ -122,7 +122,7 @@
          0,
          true,
          0,
-         "31f87e2d",
+         "bd168130",
          null,
          null,
          false
@@ -131,7 +131,7 @@
          "TO",
          [
             15,
-            "808931f87e2d578a1f4a5c9d105902"
+            "8089bd168130db64e057d073ef448e"
          ],
          false
       ],
@@ -144,7 +144,7 @@
          0,
          true,
          0,
-         "2dfa9e66",
+         "b6d7bd64",
          null,
          null,
          false
@@ -153,7 +153,7 @@
          "TO",
          [
             15,
-            "80892dfa9e664b88ff01409ff0121c"
+            "8089b6d7bd64d0a5dc03dbb2d31087"
          ],
          false
       ],
@@ -166,7 +166,7 @@
          1,
          false,
          0,
-         "716df605",
+         "48ee4276",
          null,
          null,
          false
@@ -175,7 +175,7 @@
          "TO",
          [
             15,
-            "0189716df605171f97621c08987143"
+            "018948ee42762e9c2311258b2c027a"
          ],
          false
       ],
@@ -188,7 +188,7 @@
          0,
          true,
          0,
-         "2b9ead1e",
+         "5b5db7ef",
          null,
          null,
          false
@@ -197,7 +197,7 @@
          "TO",
          [
             15,
-            "80892b9ead1e4deccc7946fbc36a18"
+            "80895b5db7ef3d2fd6883638d99b68"
          ],
          false
       ],
