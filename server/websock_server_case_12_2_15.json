@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send 1000 compressed messages each of payload size 131072, auto-fragment to 256 octets. Use default permessage-deflate offer.",
    "droppedByMe": false,
-   "duration": 31678,
+   "duration": 25054,
    "expectation": "Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.",
    "expected": {},
    "expectedClose": {
@@ -19,8 +19,8 @@
       "requireClean": true
    },
    "failedByMe": false,
-   "httpRequest": "GET /ws HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8888\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: Gp4ZNNDTta9ZeJg8OOlYbQ==\r\nSec-WebSocket-Extensions: permessage-deflate; client_no_context_takeover; client_max_window_bits\r\nSec-WebSocket-Version: 13\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Fri, 16 Jul 2021 17:38:09 GMT\r\nSec-Websocket-Extensions: permessage-deflate; client_no_context_takeover\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: Vps2hrLqRl4fYckr965ZHel1tzM=\r\n\r\n",
+   "httpRequest": "GET /ws HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8888\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: Z684bOKUWqswuMjJBP5KTQ==\r\nSec-WebSocket-Extensions: permessage-deflate; client_no_context_takeover; client_max_window_bits\r\nSec-WebSocket-Version: 13\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Mon, 19 Jul 2021 14:23:30 GMT\r\nSec-Websocket-Extensions: permessage-deflate; client_no_context_takeover\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: gXWqlSTmaXTpJZsYUflSuIAZkV0=\r\n\r\n",
    "id": "12.2.15",
    "isServer": false,
    "localCloseCode": 1000,
@@ -348,6 +348,7 @@
       "43670": 1,
       "43671": 1,
       "43673": 1,
+      "43678": 1,
       "43683": 1,
       "43686": 1,
       "43687": 1,
@@ -362,7 +363,6 @@
       "43712": 1,
       "43716": 1,
       "43722": 1,
-      "43731": 1,
       "43734": 1,
       "43781": 1,
       "43816": 1,
@@ -373,7 +373,7 @@
       "43960": 1,
       "43982": 1,
       "44043": 1,
-      "44048": 1,
+      "44101": 1,
       "44118": 1,
       "44141": 1,
       "44188": 1,
@@ -554,8 +554,8 @@
       "47826": 1,
       "47861": 1,
       "47917": 1,
-      "47933": 1,
       "47982": 2,
+      "47986": 1,
       "47990": 1,
       "48051": 1,
       "48055": 1,
@@ -755,13 +755,13 @@
       "48885": 1,
       "48886": 1,
       "48891": 1,
-      "48894": 1,
       "48921": 1,
       "48924": 1,
       "48937": 1,
       "48941": 1,
       "48945": 1,
       "48946": 1,
+      "48947": 1,
       "48961": 1,
       "48962": 1,
       "48970": 1,
@@ -840,7 +840,7 @@
       "49085": 2,
       "49086": 2,
       "49088": 2,
-      "49089": 1,
+      "49089": 2,
       "49092": 2,
       "49094": 1,
       "49095": 2,
@@ -852,12 +852,11 @@
       "49110": 1,
       "49113": 2,
       "49116": 1,
-      "49142": 1,
       "49226": 1,
-      "65483": 2,
-      "65536": 998
+      "65483": 3,
+      "65536": 997
    },
-   "started": "2021-07-16T17:38:09.838Z",
+   "started": "2021-07-19T14:23:30.019Z",
    "trafficStats": {
       "incomingCompressionRatio": 0.8504757537841797,
       "incomingOctetsAppLevel": 131072000,
@@ -1155,7 +1154,7 @@
          "RO",
          [
             240,
-            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a204672692c203136204a756c20323032312031373a33383a30 ..."
+            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a204d6f6e2c203139204a756c20323032312031343a32333a33 ..."
          ]
       ],
       [
@@ -1179,7 +1178,7 @@
          8,
          true,
          0,
-         "c7cec5bd",
+         "4d94762e",
          null,
          null,
          false
@@ -1188,7 +1187,7 @@
          "TO",
          [
             8,
-            "8882c7cec5bdc426"
+            "88824d94762e4e7c"
          ],
          false
       ],
