@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send text Message fragmented into 2 fragments, then Continuation Frame with FIN = false where there is nothing to continue, then unfragmented Text Message, all sent in one chop.",
    "droppedByMe": false,
-   "duration": 1,
+   "duration": 2,
    "expectation": "The connection is failed immediately, since there is no message to continue.",
    "expected": {
       "NON-STRICT": [],
@@ -28,8 +28,8 @@
       "requireClean": false
    },
    "failedByMe": false,
-   "httpRequest": "GET /runCase?case=59&agent=websock-secure-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9002\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: rVbXegkMaJ8PYimT/ChRnA==\r\nCache-Control: no-cache\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: ONU2P3B5doWZiX8xpJGfHfkAZwM=\r\n\r\n",
+   "httpRequest": "GET /runCase?case=59&agent=websock-secure-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9002\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: YQHN+5sN++3kdooBQwOeew==\r\nCache-Control: no-cache\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: diOgSLfjwvSu/9sxns9ceYR8MNA=\r\n\r\n",
    "id": "5.15",
    "isServer": true,
    "localCloseCode": null,
@@ -54,7 +54,7 @@
       "24": 1,
       "294": 1
    },
-   "started": "2021-07-19T16:22:41.186Z",
+   "started": "2021-07-27T23:48:10.204Z",
    "trafficStats": null,
    "txFrameStats": {
       "0": 2,
@@ -181,7 +181,7 @@
          "RO",
          [
             24,
-            "8192443e7109224c106e295b1f7d7558036823531467300c"
+            "819209b3f6b36fc197d464d698c738d584d26ede93dd7d81"
          ]
       ],
       [
@@ -194,7 +194,7 @@
          true,
          0,
          true,
-         "443e7109"
+         "09b3f6b3"
       ]
    ]
 }
