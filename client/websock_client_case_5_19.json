@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "A fragmented text message is sent in multiple frames. After\n   sending the first 2 frames of the text message, a Ping is sent. Then we wait 1s,\n   then we send 2 more text fragments, another Ping and then the final text fragment.\n   Everything is legal.",
    "droppedByMe": true,
-   "duration": 1001,
+   "duration": 1002,
    "expectation": "The peer immediately answers the first Ping before\n   it has received the last text message fragment. The peer pong's back the Ping's\n   payload exactly, and echo's the payload of the fragmented message back to us.",
    "expected": {
       "OK": [
@@ -35,8 +35,8 @@
       "requireClean": true
    },
    "failedByMe": false,
-   "httpRequest": "GET /runCase?case=63&agent=websock-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9001\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: sUpcEmapyjUbyt+G08W8mQ==\r\nCache-Control: no-cache\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: PGJ7Cyu/0waqEAFL9mK9m9pX30A=\r\n\r\n",
+   "httpRequest": "GET /runCase?case=63&agent=websock-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9001\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: EOHf9322w1KlURTnKj1YFA==\r\nCache-Control: no-cache\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: RJzpZHKW1kI44smLP76QcxbJ14w=\r\n\r\n",
    "id": "5.19",
    "isServer": true,
    "localCloseCode": 1000,
@@ -73,7 +73,7 @@
       "51": 1,
       "287": 1
    },
-   "started": "2021-07-27T23:47:25.177Z",
+   "started": "2021-07-28T10:40:54.577Z",
    "trafficStats": null,
    "txFrameStats": {
       "0": 4,
@@ -182,7 +182,7 @@
          "RO",
          [
             15,
-            "8a89052f223775404c50684a020624"
+            "8a89197b2d9a691443fd741e0dab38"
          ]
       ],
       [
@@ -195,7 +195,7 @@
          true,
          0,
          true,
-         "052f2237"
+         "197b2d9a"
       ],
       [
          "CTE",
@@ -297,7 +297,7 @@
          "RO",
          [
             15,
-            "8a8952794ea8221620cf3f1c6e9a73"
+            "8a89ccde4317bcb12d70a1bb6325ed"
          ]
       ],
       [
@@ -310,13 +310,13 @@
          true,
          0,
          true,
-         "52794ea8"
+         "ccde4317"
       ],
       [
          "RO",
          [
             51,
-            "81ad3c53d1ea5a21b08d5136bf9e0d35a38b5b3eb4844861b7985d34bc8f5227e28c4e32b687593da5de5a21b08d5136bf9e09"
+            "81adbdb4b6afdbc6d7c8d0d1d8db8cd2c4cedad9d3c1c986d0dddcd3dbcad3c085c9cfd5d1c2d8dac29bdbc6d7c8d0d1d8db88"
          ]
       ],
       [
@@ -329,7 +329,7 @@
          true,
          0,
          true,
-         "3c53d1ea"
+         "bdb4b6af"
       ],
       [
          "TF",
@@ -357,7 +357,7 @@
          "RO",
          [
             8,
-            "888212e501e6110d"
+            "8882f0a3921df34b"
          ]
       ],
       [
@@ -370,7 +370,7 @@
          true,
          0,
          true,
-         "12e501e6"
+         "f0a3921d"
       ]
    ]
 }
