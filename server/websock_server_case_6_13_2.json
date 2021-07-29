@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xe020e120e220e320e420e520e620e720e820e920ea20eb20ec20ed20ee20",
    "droppedByMe": false,
-   "duration": 1,
+   "duration": 0,
    "expectation": "The connection is failed immediately, since the payload is not valid UTF-8.",
    "expected": {
       "OK": []
@@ -22,8 +22,8 @@
       "requireClean": false
    },
    "failedByMe": false,
-   "httpRequest": "GET /ws HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8888\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: tXacJhAcAux5ja08vohumw==\r\nSec-WebSocket-Version: 13\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Wed, 28 Jul 2021 18:00:54 GMT\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: CqRKHfMwp3fJLhTzxlbtckmjsmA=\r\n\r\n",
+   "httpRequest": "GET /ws HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8888\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: 1MEOzU/DKPDsQra0S3BFQg==\r\nSec-WebSocket-Version: 13\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Thu, 29 Jul 2021 07:05:29 GMT\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: VYnJSHR+5ZHsLYd/JzXv+zzdF1o=\r\n\r\n",
    "id": "6.13.2",
    "isServer": false,
    "localCloseCode": null,
@@ -39,7 +39,7 @@
    "rxOctetStats": {
       "166": 1
    },
-   "started": "2021-07-28T18:00:54.142Z",
+   "started": "2021-07-29T07:05:29.230Z",
    "trafficStats": null,
    "txFrameStats": {
       "1": 1
@@ -66,7 +66,7 @@
          "RO",
          [
             166,
-            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a205765642c203238204a756c20323032312031383a30303a35 ..."
+            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a205468752c203239204a756c20323032312030373a30353a32 ..."
          ]
       ],
       [
@@ -78,7 +78,7 @@
          1,
          true,
          0,
-         "c8d93eca",
+         "11250f0a",
          null,
          null,
          false
@@ -87,7 +87,7 @@
          "TO",
          [
             36,
-            "819ec8d93eca28f9dfea2af9ddea2cf9dbea2ef9d9ea20f9d7ea22f9d5ea24f9d3ea26f9"
+            "819e11250f0af105ee2af305ec2af505ea2af705e82af905e62afb05e42afd05e22aff05"
          ],
          false
       ],
