@@ -1,14 +1,14 @@
 {
    "agent": "websock-secure-client",
-   "behavior": "NON-STRICT",
-   "behaviorClose": "OK",
+   "behavior": "FAILED",
+   "behaviorClose": "FAILED",
    "case": 76,
-   "closedByMe": false,
+   "closedByMe": true,
    "createStats": true,
    "createWirelog": true,
    "description": "Same as Case 6.4.1, but we send message not in 3 frames, but in 3 chops of the same message frame.\n<br><br>MESSAGE PARTS:<br>\nPART1 = cebae1bdb9cf83cebcceb5<br>\nPART2 = f4908080<br>\nPART3 = 656469746564<br>\n",
-   "droppedByMe": false,
-   "duration": 2002,
+   "droppedByMe": true,
+   "duration": 4001,
    "expectation": "The first chop is accepted, we expect to timeout on the first wait. The 2nd chop should be rejected immediately (fail fast on UTF-8). If we timeout, we expect the connection is failed at least then, since the complete message payload is not valid UTF-8.",
    "expected": {
       "NON-STRICT": [
@@ -36,13 +36,13 @@
       "closedByWrongEndpointIsFatal": true,
       "requireClean": false
    },
-   "failedByMe": false,
-   "httpRequest": "GET /runCase?case=76&agent=websock-secure-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9002\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: 6i0RRc6pnJ6H5sUgoTm7Tw==\r\nCache-Control: no-cache\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: dZVrEL+3yJD821IfVmBi5M7Nd98=\r\n\r\n",
+   "failedByMe": true,
+   "httpRequest": "GET /runCase?case=76&agent=websock-secure-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9002\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: vAlY3vjnnPebUdJAzHFTpg==\r\nCache-Control: no-cache\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: +3Gqx/IjUzIW2zmqyREckSlAle4=\r\n\r\n",
    "id": "6.4.3",
    "isServer": true,
-   "localCloseCode": null,
-   "localCloseReason": null,
+   "localCloseCode": 1001,
+   "localCloseReason": "Going Away",
    "received": [
       [
          "timeout",
@@ -58,26 +58,28 @@
    "reportCompressionRatio": false,
    "reportTime": false,
    "result": "Actual events match at least one expected.",
-   "resultClose": "Connection was properly closed",
+   "resultClose": "The connection was failed by the wrong endpoint",
    "rxFrameStats": {},
    "rxOctetStats": {
       "294": 1
    },
-   "started": "2021-07-30T10:37:13.577Z",
+   "started": "2021-07-30T15:42:32.101Z",
    "trafficStats": null,
    "txFrameStats": {
-      "0": 1
+      "0": 1,
+      "8": 1
    },
    "txOctetStats": {
       "2": 2,
       "4": 1,
       "6": 1,
       "11": 1,
+      "14": 1,
       "206": 1
    },
    "wasClean": false,
-   "wasCloseHandshakeTimeout": false,
-   "wasNotCleanReason": "peer dropped the TCP connection without previous WebSocket closing handshake",
+   "wasCloseHandshakeTimeout": true,
+   "wasNotCleanReason": "peer did not respond (in time) in closing handshake",
    "wasOpenHandshakeTimeout": false,
    "wasServerConnectionDropTimeout": false,
    "wirelog": [
@@ -171,6 +173,31 @@
       [
          "KL",
          1
+      ],
+      [
+         "KLE"
+      ],
+      [
+         "TF",
+         [
+            12,
+            "0x03e9476f696e672041776179"
+         ],
+         8,
+         true,
+         0,
+         null,
+         null,
+         null,
+         false
+      ],
+      [
+         "TO",
+         [
+            14,
+            "880c03e9476f696e672041776179"
+         ],
+         false
       ]
    ]
 }

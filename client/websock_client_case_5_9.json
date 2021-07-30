@@ -1,14 +1,14 @@
 {
    "agent": "websock-client",
-   "behavior": "FAILED",
-   "behaviorClose": "FAILED",
+   "behavior": "OK",
+   "behaviorClose": "OK",
    "case": 53,
-   "closedByMe": true,
+   "closedByMe": false,
    "createStats": true,
    "createWirelog": true,
    "description": "Send unfragmented Text Message after Continuation Frame with FIN = true, where there is nothing to continue, sent in one chop.",
-   "droppedByMe": true,
-   "duration": 1001,
+   "droppedByMe": false,
+   "duration": 1,
    "expectation": "The connection is failed immediately, since there is no message to continue.",
    "expected": {
       "OK": []
@@ -20,58 +20,38 @@
       "closedByMe": false,
       "requireClean": false
    },
-   "failedByMe": true,
-   "httpRequest": "GET /runCase?case=53&agent=websock-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9001\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: 8d5H6OQeJgDUCZ13sOHjJw==\r\nCache-Control: no-cache\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: CUjc35yoBn8Q7446N/cI8WIftCk=\r\n\r\n",
+   "failedByMe": false,
+   "httpRequest": "GET /runCase?case=53&agent=websock-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9001\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: CItHFwaSoHlhma1d9DucIw==\r\nCache-Control: no-cache\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: Ws8P3uzLFsZbIputCHROiKh0tqo=\r\n\r\n",
    "id": "5.9",
    "isServer": true,
-   "localCloseCode": 1001,
-   "localCloseReason": "Going Away",
-   "received": [
-      [
-         "message",
-         "non-continuation payload",
-         true
-      ],
-      [
-         "message",
-         "Hello, world!",
-         false
-      ]
-   ],
-   "remoteCloseCode": 1000,
+   "localCloseCode": null,
+   "localCloseReason": null,
+   "received": [],
+   "remoteCloseCode": null,
    "remoteCloseReason": null,
    "reportCompressionRatio": false,
    "reportTime": false,
-   "result": "Actual events differ from any expected.",
-   "resultClose": "The connection was failed by the wrong endpoint",
-   "rxFrameStats": {
-      "1": 1,
-      "2": 1,
-      "8": 1
-   },
+   "result": "Actual events match at least one expected.",
+   "resultClose": "Connection was properly closed",
+   "rxFrameStats": {},
    "rxOctetStats": {
-      "8": 1,
-      "19": 1,
-      "30": 1,
       "287": 1
    },
-   "started": "2021-07-30T10:36:38.100Z",
+   "started": "2021-07-30T15:41:24.800Z",
    "trafficStats": null,
    "txFrameStats": {
       "0": 1,
-      "1": 1,
-      "8": 1
+      "1": 1
    },
    "txOctetStats": {
-      "14": 1,
       "15": 1,
       "26": 1,
       "206": 1
    },
-   "wasClean": true,
+   "wasClean": false,
    "wasCloseHandshakeTimeout": false,
-   "wasNotCleanReason": null,
+   "wasNotCleanReason": "peer dropped the TCP connection without previous WebSocket closing handshake",
    "wasOpenHandshakeTimeout": false,
    "wasServerConnectionDropTimeout": false,
    "wirelog": [
@@ -137,88 +117,6 @@
       [
          "KL",
          1
-      ],
-      [
-         "RO",
-         [
-            30,
-            "82984e8b719e20e41fb32de41fea27e504ff3ae21ef06efb10e722e410fa"
-         ]
-      ],
-      [
-         "RF",
-         [
-            24,
-            "non-continuation payload"
-         ],
-         2,
-         true,
-         0,
-         true,
-         "4e8b719e"
-      ],
-      [
-         "RO",
-         [
-            19,
-            "818d73c91af03bac769c1ce53a871cbb769452"
-         ]
-      ],
-      [
-         "RF",
-         [
-            13,
-            "Hello, world!"
-         ],
-         1,
-         true,
-         0,
-         true,
-         "73c91af0"
-      ],
-      [
-         "KLE"
-      ],
-      [
-         "TF",
-         [
-            12,
-            "0x03e9476f696e672041776179"
-         ],
-         8,
-         true,
-         0,
-         null,
-         null,
-         null,
-         false
-      ],
-      [
-         "TO",
-         [
-            14,
-            "880c03e9476f696e672041776179"
-         ],
-         false
-      ],
-      [
-         "RO",
-         [
-            8,
-            "88822d203a602ec8"
-         ]
-      ],
-      [
-         "RF",
-         [
-            2,
-            "0x03e8"
-         ],
-         8,
-         true,
-         0,
-         true,
-         "2d203a60"
       ]
    ]
 }

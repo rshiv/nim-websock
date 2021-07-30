@@ -1,14 +1,14 @@
 {
    "agent": "websock-secure-client",
-   "behavior": "OK",
-   "behaviorClose": "OK",
+   "behavior": "FAILED",
+   "behaviorClose": "UNCLEAN",
    "case": 9,
    "closedByMe": true,
    "createStats": true,
    "createWirelog": true,
    "description": "Send binary message with payload 0.",
    "droppedByMe": true,
-   "duration": 2,
+   "duration": 2001,
    "expectation": "Receive echo'ed binary message (with empty payload). Clean close with normal code.",
    "expected": {
       "OK": [
@@ -26,36 +26,25 @@
       "closedByMe": true,
       "requireClean": true
    },
-   "failedByMe": false,
-   "httpRequest": "GET /runCase?case=9&agent=websock-secure-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9002\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: Wu67S4T/kgh5pDXRBrCrLw==\r\nCache-Control: no-cache\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: FxhCjafBvgsL7EG5unvfBvg6a/g=\r\n\r\n",
+   "failedByMe": true,
+   "httpRequest": "GET /runCase?case=9&agent=websock-secure-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9002\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: YPha9ZMVml2OZyFo68ecig==\r\nCache-Control: no-cache\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: TKqeuYGgZ9s4LZnyEv8P+W0xj3c=\r\n\r\n",
    "id": "1.2.1",
    "isServer": true,
-   "localCloseCode": 1000,
-   "localCloseReason": null,
-   "received": [
-      [
-         "message",
-         "",
-         true
-      ]
-   ],
-   "remoteCloseCode": 1000,
+   "localCloseCode": 1001,
+   "localCloseReason": "Going Away",
+   "received": [],
+   "remoteCloseCode": null,
    "remoteCloseReason": null,
    "reportCompressionRatio": false,
    "reportTime": false,
-   "result": "Actual events match at least one expected.",
-   "resultClose": "Connection was properly closed",
-   "rxFrameStats": {
-      "2": 1,
-      "8": 1
-   },
+   "result": "Actual events differ from any expected.",
+   "resultClose": "The spec requires the connection to be failed cleanly here",
+   "rxFrameStats": {},
    "rxOctetStats": {
-      "6": 1,
-      "8": 1,
       "293": 1
    },
-   "started": "2021-07-30T10:36:56.676Z",
+   "started": "2021-07-30T15:42:25.433Z",
    "trafficStats": null,
    "txFrameStats": {
       "2": 1,
@@ -63,12 +52,12 @@
    },
    "txOctetStats": {
       "2": 1,
-      "4": 1,
+      "14": 1,
       "206": 1
    },
-   "wasClean": true,
-   "wasCloseHandshakeTimeout": false,
-   "wasNotCleanReason": null,
+   "wasClean": false,
+   "wasCloseHandshakeTimeout": true,
+   "wasNotCleanReason": "peer did not respond (in time) in closing handshake",
    "wasOpenHandshakeTimeout": false,
    "wasServerConnectionDropTimeout": false,
    "wirelog": [
@@ -114,29 +103,13 @@
          1
       ],
       [
-         "RO",
-         [
-            6,
-            "82807f14fa3b"
-         ]
-      ],
-      [
-         "RF",
-         [
-            0,
-            ""
-         ],
-         2,
-         true,
-         0,
-         true,
-         "7f14fa3b"
+         "KLE"
       ],
       [
          "TF",
          [
-            2,
-            "0x03e8"
+            12,
+            "0x03e9476f696e672041776179"
          ],
          8,
          true,
@@ -149,29 +122,10 @@
       [
          "TO",
          [
-            4,
-            "880203e8"
+            14,
+            "880c03e9476f696e672041776179"
          ],
          false
-      ],
-      [
-         "RO",
-         [
-            8,
-            "8882ad7fb441ae97"
-         ]
-      ],
-      [
-         "RF",
-         [
-            2,
-            "0x03e8"
-         ],
-         8,
-         true,
-         0,
-         true,
-         "ad7fb441"
       ]
    ]
 }

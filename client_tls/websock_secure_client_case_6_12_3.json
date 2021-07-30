@@ -1,14 +1,14 @@
 {
    "agent": "websock-secure-client",
-   "behavior": "OK",
-   "behaviorClose": "OK",
+   "behavior": "FAILED",
+   "behaviorClose": "FAILED",
    "case": 114,
-   "closedByMe": false,
+   "closedByMe": true,
    "createStats": true,
    "createWirelog": true,
    "description": "Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0x80bf",
-   "droppedByMe": false,
-   "duration": 1,
+   "droppedByMe": true,
+   "duration": 1502,
    "expectation": "The connection is failed immediately, since the payload is not valid UTF-8.",
    "expected": {
       "OK": []
@@ -21,36 +21,38 @@
       "closedByWrongEndpointIsFatal": true,
       "requireClean": false
    },
-   "failedByMe": false,
-   "httpRequest": "GET /runCase?case=114&agent=websock-secure-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9002\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: 2wOzA2J2c1TdojpZl/64Aw==\r\nCache-Control: no-cache\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: 7c4MSMFhU8pjLkXM/MSOj/AjM0M=\r\n\r\n",
+   "failedByMe": true,
+   "httpRequest": "GET /runCase?case=114&agent=websock-secure-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9002\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: NItiEatikBCI1Gw/nNHLbw==\r\nCache-Control: no-cache\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: bEOWjnhPyWNfD9Ae6ydJsWQ3CGY=\r\n\r\n",
    "id": "6.12.3",
    "isServer": true,
-   "localCloseCode": null,
-   "localCloseReason": null,
+   "localCloseCode": 1001,
+   "localCloseReason": "Going Away",
    "received": [],
    "remoteCloseCode": null,
    "remoteCloseReason": null,
    "reportCompressionRatio": false,
    "reportTime": false,
    "result": "Actual events match at least one expected.",
-   "resultClose": "Connection was properly closed",
+   "resultClose": "The connection was failed by the wrong endpoint",
    "rxFrameStats": {},
    "rxOctetStats": {
       "295": 1
    },
-   "started": "2021-07-30T10:37:18.010Z",
+   "started": "2021-07-30T15:42:36.555Z",
    "trafficStats": null,
    "txFrameStats": {
-      "1": 1
+      "1": 1,
+      "8": 1
    },
    "txOctetStats": {
       "4": 1,
+      "14": 1,
       "206": 1
    },
    "wasClean": false,
-   "wasCloseHandshakeTimeout": false,
-   "wasNotCleanReason": "peer dropped the TCP connection without previous WebSocket closing handshake",
+   "wasCloseHandshakeTimeout": true,
+   "wasNotCleanReason": "peer did not respond (in time) in closing handshake",
    "wasOpenHandshakeTimeout": false,
    "wasServerConnectionDropTimeout": false,
    "wirelog": [
@@ -94,6 +96,31 @@
       [
          "KL",
          0.5
+      ],
+      [
+         "KLE"
+      ],
+      [
+         "TF",
+         [
+            12,
+            "0x03e9476f696e672041776179"
+         ],
+         8,
+         true,
+         0,
+         null,
+         null,
+         null,
+         false
+      ],
+      [
+         "TO",
+         [
+            14,
+            "880c03e9476f696e672041776179"
+         ],
+         false
       ]
    ]
 }
