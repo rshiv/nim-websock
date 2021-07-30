@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send unfragmented Text Message after Continuation Frame with FIN = true, where there is nothing to continue, sent in per-frame chops.",
    "droppedByMe": true,
-   "duration": 1001,
+   "duration": 1002,
    "expectation": "The connection is failed immediately, since there is no message to continue.",
    "expected": {
       "OK": []
@@ -21,8 +21,8 @@
       "requireClean": false
    },
    "failedByMe": true,
-   "httpRequest": "GET /runCase?case=54&agent=websock-secure-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9002\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: +6pxJubuL4yW8Q5VgAWHjw==\r\nCache-Control: no-cache\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: NfK/y+u5ihUhlF8OlShcnyBi2Pw=\r\n\r\n",
+   "httpRequest": "GET /runCase?case=54&agent=websock-secure-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9002\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: 0cHVx/oOsrvZuRgijr0/Jg==\r\nCache-Control: no-cache\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: IrwUjAio6kRsocQOVcHwbekysRU=\r\n\r\n",
    "id": "5.10",
    "isServer": true,
    "localCloseCode": 1001,
@@ -56,7 +56,7 @@
       "30": 1,
       "294": 1
    },
-   "started": "2021-07-30T08:45:57.488Z",
+   "started": "2021-07-30T10:36:58.267Z",
    "trafficStats": null,
    "txFrameStats": {
       "0": 1,
@@ -142,7 +142,7 @@
          "RO",
          [
             30,
-            "8298ed41e5c0832e8bed8e2e8bb4842f90a199288aaecd3184b9812e84a4"
+            "82989e82493bf0ed2716fded274ff7ec3c5aeaeb2655bef22842f2ed285f"
          ]
       ],
       [
@@ -155,13 +155,13 @@
          true,
          0,
          true,
-         "ed41e5c0"
+         "9e82493b"
       ],
       [
          "RO",
          [
             19,
-            "818d347608197c1364755b5a286e5b04647d15"
+            "818df0cee68cb8ab8ae09fe2c6fb9fbc8ae8d1"
          ]
       ],
       [
@@ -174,7 +174,7 @@
          true,
          0,
          true,
-         "34760819"
+         "f0cee68c"
       ],
       [
          "KLE"
@@ -205,7 +205,7 @@
          "RO",
          [
             8,
-            "88824d173c874eff"
+            "88827068883a7380"
          ]
       ],
       [
@@ -218,7 +218,7 @@
          true,
          0,
          true,
-         "4d173c87"
+         "7068883a"
       ]
    ]
 }

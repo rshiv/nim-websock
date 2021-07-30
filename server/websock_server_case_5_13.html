@@ -202,7 +202,7 @@ pre.wirelog_tcp_closed_by_peer {color: #fff; margin: 0; background-color: #000; 
       <center><a href="http://autobahn.ws/testsuite" title="Autobahn WebSocket Testsuite"><img src="http://autobahn.ws/static/img/ws_protocol_test_report.png"          border="0" width="820" height="46" alt="Autobahn WebSocket Testsuite Report"></img></a></center>
       <center><a href="http://autobahn.ws"           title="Autobahn WebSocket">          <img src="http://autobahn.ws/static/img/ws_protocol_test_report_autobahn.png" border="0" width="300" height="68" alt="Autobahn WebSocket">                 </img></a></center>
       <br/>
-      <p class="case case_failed">websock server - <span style="font-size: 1.3em;"><b>Case 5.13</b></span> : Fail - <span style="font-size: 0.9em;"><b>1011</b> ms @ 2021-07-30T08:44:58.468Z</a></p>
+      <p class="case case_failed">websock server - <span style="font-size: 1.3em;"><b>Case 5.13</b></span> : Fail - <span style="font-size: 0.9em;"><b>1011</b> ms @ 2021-07-30T10:36:48.682Z</a></p>
       <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send unfragmented Text Message after Continuation Frame with FIN = false, where there is nothing to continue, sent in per-frame chops.</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since there is no message to continue.</p>
 
@@ -221,13 +221,13 @@ Upgrade: WebSocket
 Connection: Upgrade
 Pragma: no-cache
 Cache-Control: no-cache
-Sec-WebSocket-Key: lcU3ZVStAXuxFul5UWmrrQ==
+Sec-WebSocket-Key: yPJ8vw144Qz69ZyoH+OY7w==
 Sec-WebSocket-Version: 13</pre>
       <pre class="http_dump">HTTP/1.1 101 Switching Protocols
-Date: Fri, 30 Jul 2021 08:44:58 GMT
+Date: Fri, 30 Jul 2021 10:36:48 GMT
 Upgrade: websocket
 Connection: Upgrade
-Sec-Websocket-Accept: eAchW/rOdS+VHkUIO+mVmKmhT+U=</pre>
+Sec-Websocket-Accept: 06fByHzKD8X12nO4OcRk47iht5A=</pre>
       <br/><hr/>
       <h2>Closing Behavior</h2>
       <table>
@@ -285,21 +285,21 @@ Sec-Websocket-Accept: eAchW/rOdS+VHkUIO+mVmKmhT+U=</pre>
          <pre class="wirelog_tx_octets">000 TX OCTETS: 474554202f777320485454502f312e310d0a557365722d4167656e743a204175746f6261686e5465737453756974652f302e</pre>
          <pre class="wirelog_tx_octets">               382e322d302e31302e390d0a486f ...</pre>
          <pre class="wirelog_rx_octets">001 RX OCTETS: 485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a204672692c203330204a75</pre>
-         <pre class="wirelog_rx_octets">               6c20323032312030383a34343a35 ...</pre>
-         <pre class="wirelog_tx_frame_sync">002 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=24, MASK=6e6c38cc, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=True</pre>
+         <pre class="wirelog_rx_octets">               6c20323032312031303a33363a34 ...</pre>
+         <pre class="wirelog_tx_frame_sync">002 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=24, MASK=5dc483d8, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=True</pre>
          <pre class="wirelog_tx_frame_sync">               non-continuation payload</pre>
-         <pre class="wirelog_tx_octets_sync">003 TX OCTETS: 00986e6c38cc000356e10d0356b807024dad1a0557a24e1c59b5020359a8</pre>
-         <pre class="wirelog_tx_frame_sync">004 TX FRAME : OPCODE=1, FIN=True, RSV=0, PAYLOAD-LEN=13, MASK=4f00160b, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=True</pre>
+         <pre class="wirelog_tx_octets_sync">003 TX OCTETS: 00985dc483d833abedf53eabedac34aaf6b929adecb67db4e2a131abe2bc</pre>
+         <pre class="wirelog_tx_frame_sync">004 TX FRAME : OPCODE=1, FIN=True, RSV=0, PAYLOAD-LEN=13, MASK=4370c3bb, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=True</pre>
          <pre class="wirelog_tx_frame_sync">               Hello, world!</pre>
          <pre class="wirelog_kill_after">005 FAIL CONNECTION AFTER 1.000000 sec</pre>
-         <pre class="wirelog_tx_octets_sync">006 TX OCTETS: 818d4f00160b07657a67202c367c20727a6f6e</pre>
+         <pre class="wirelog_tx_octets_sync">006 TX OCTETS: 818d4370c3bb0b15afd72c5ce3cc2c02afdf62</pre>
          <pre class="wirelog_rx_octets">007 RX OCTETS: 81256e6f6e2d636f6e74696e756174696f6e207061796c6f616448656c6c6f2c20776f726c6421</pre>
          <pre class="wirelog_rx_frame">008 RX FRAME : OPCODE=1, FIN=True, RSV=0, PAYLOAD-LEN=37, MASKED=False, MASK=None</pre>
          <pre class="wirelog_rx_frame">               non-continuation payloadHello, world!</pre>
          <pre class="wirelog_kill_after">009 FAILING CONNECTION</pre>
-         <pre class="wirelog_tx_frame">010 TX FRAME : OPCODE=8, FIN=True, RSV=0, PAYLOAD-LEN=12, MASK=1a380de8, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_frame">010 TX FRAME : OPCODE=8, FIN=True, RSV=0, PAYLOAD-LEN=12, MASK=7d63dbf8, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               0x03e9476f696e672041776179</pre>
-         <pre class="wirelog_tx_octets">011 TX OCTETS: 888c1a380de819d14a8773566ac85b4f6c91</pre>
+         <pre class="wirelog_tx_octets">011 TX OCTETS: 888c7d63dbf87e8a9c97140dbcd83c14ba81</pre>
          <pre class="wirelog_rx_octets">012 RX OCTETS: 880203e8</pre>
          <pre class="wirelog_rx_frame">013 RX FRAME : OPCODE=8, FIN=True, RSV=0, PAYLOAD-LEN=2, MASKED=False, MASK=None</pre>
          <pre class="wirelog_rx_frame">               0x03e8</pre>
