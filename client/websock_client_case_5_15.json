@@ -1,14 +1,14 @@
 {
    "agent": "websock-client",
-   "behavior": "OK",
-   "behaviorClose": "OK",
+   "behavior": "FAILED",
+   "behaviorClose": "FAILED",
    "case": 59,
-   "closedByMe": false,
+   "closedByMe": true,
    "createStats": true,
    "createWirelog": true,
    "description": "Send text Message fragmented into 2 fragments, then Continuation Frame with FIN = false where there is nothing to continue, then unfragmented Text Message, all sent in one chop.",
-   "droppedByMe": false,
-   "duration": 1,
+   "droppedByMe": true,
+   "duration": 1001,
    "expectation": "The connection is failed immediately, since there is no message to continue.",
    "expected": {
       "NON-STRICT": [],
@@ -27,46 +27,55 @@
       "closedByMe": false,
       "requireClean": false
    },
-   "failedByMe": false,
-   "httpRequest": "GET /runCase?case=59&agent=websock-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9001\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: RcHDM2ctW1lBwBJ9Cncy2A==\r\nCache-Control: no-cache\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: RyeJKd5HKZH7KkLVifGUB0u97Y8=\r\n\r\n",
+   "failedByMe": true,
+   "httpRequest": "GET /runCase?case=59&agent=websock-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9001\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: 8OfPu7NCqri2TEHnKjqZ0w==\r\nCache-Control: no-cache\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: G9432Ju8A8V/R5olxx6Sih2NpXY=\r\n\r\n",
    "id": "5.15",
    "isServer": true,
-   "localCloseCode": null,
-   "localCloseReason": null,
+   "localCloseCode": 1001,
+   "localCloseReason": "Going Away",
    "received": [
       [
          "message",
          "fragment1fragment2",
          false
+      ],
+      [
+         "message",
+         "fragment3fragment4",
+         false
       ]
    ],
-   "remoteCloseCode": null,
+   "remoteCloseCode": 1000,
    "remoteCloseReason": null,
    "reportCompressionRatio": false,
    "reportTime": false,
-   "result": "Actual events match at least one expected.",
-   "resultClose": "Connection was properly closed",
+   "result": "Actual events differ from any expected.",
+   "resultClose": "The connection was failed by the wrong endpoint",
    "rxFrameStats": {
-      "1": 1
+      "1": 2,
+      "8": 1
    },
    "rxOctetStats": {
-      "24": 1,
+      "8": 1,
+      "24": 2,
       "287": 1
    },
-   "started": "2021-07-29T07:05:37.337Z",
+   "started": "2021-07-30T08:45:09.711Z",
    "trafficStats": null,
    "txFrameStats": {
       "0": 2,
-      "1": 2
+      "1": 2,
+      "8": 1
    },
    "txOctetStats": {
       "11": 4,
+      "14": 1,
       "206": 1
    },
-   "wasClean": false,
+   "wasClean": true,
    "wasCloseHandshakeTimeout": false,
-   "wasNotCleanReason": "peer dropped the TCP connection without previous WebSocket closing handshake",
+   "wasNotCleanReason": null,
    "wasOpenHandshakeTimeout": false,
    "wasServerConnectionDropTimeout": false,
    "wirelog": [
@@ -181,7 +190,7 @@
          "RO",
          [
             24,
-            "8192d457c47db225a51ab932aa09e531b61cb33aa113a065"
+            "8192411614fa2764759d2c737a8e7070669b267b71943524"
          ]
       ],
       [
@@ -194,7 +203,70 @@
          true,
          0,
          true,
-         "d457c47d"
+         "411614fa"
+      ],
+      [
+         "RO",
+         [
+            24,
+            "81929d9beafdfbe98b9af0fe8489aefd989cfaf68f93e9af"
+         ]
+      ],
+      [
+         "RF",
+         [
+            18,
+            "fragment3fragment4"
+         ],
+         1,
+         true,
+         0,
+         true,
+         "9d9beafd"
+      ],
+      [
+         "KLE"
+      ],
+      [
+         "TF",
+         [
+            12,
+            "0x03e9476f696e672041776179"
+         ],
+         8,
+         true,
+         0,
+         null,
+         null,
+         null,
+         false
+      ],
+      [
+         "TO",
+         [
+            14,
+            "880c03e9476f696e672041776179"
+         ],
+         false
+      ],
+      [
+         "RO",
+         [
+            8,
+            "8882172445a414cc"
+         ]
+      ],
+      [
+         "RF",
+         [
+            2,
+            "0x03e8"
+         ],
+         8,
+         true,
+         0,
+         true,
+         "172445a4"
       ]
    ]
 }

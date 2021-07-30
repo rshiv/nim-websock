@@ -1,14 +1,14 @@
 {
    "agent": "websock secure server",
-   "behavior": "OK",
-   "behaviorClose": "OK",
+   "behavior": "FAILED",
+   "behaviorClose": "FAILED",
    "case": 59,
-   "closedByMe": false,
+   "closedByMe": true,
    "createStats": true,
    "createWirelog": true,
    "description": "Send text Message fragmented into 2 fragments, then Continuation Frame with FIN = false where there is nothing to continue, then unfragmented Text Message, all sent in one chop.",
    "droppedByMe": false,
-   "duration": 1,
+   "duration": 1012,
    "expectation": "The connection is failed immediately, since there is no message to continue.",
    "expected": {
       "NON-STRICT": [],
@@ -27,46 +27,55 @@
       "closedByMe": false,
       "requireClean": false
    },
-   "failedByMe": false,
-   "httpRequest": "GET /wss HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8889\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: HiBglXOFIEU+Z4M5tOlLag==\r\nSec-WebSocket-Version: 13\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Thu, 29 Jul 2021 07:05:11 GMT\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: Q8G/Jxb27o60S9qDJhqCIsQHGs4=\r\n\r\n",
+   "failedByMe": true,
+   "httpRequest": "GET /wss HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8889\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: FWVNxSlhrs0AoxKOfHhfmg==\r\nSec-WebSocket-Version: 13\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Fri, 30 Jul 2021 08:44:02 GMT\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: BCrbvyoqUGqu+RcACpHVzUomyoI=\r\n\r\n",
    "id": "5.15",
    "isServer": false,
-   "localCloseCode": null,
-   "localCloseReason": null,
+   "localCloseCode": 1001,
+   "localCloseReason": "Going Away",
    "received": [
       [
          "message",
          "fragment1fragment2",
          false
+      ],
+      [
+         "message",
+         "fragment3fragment4",
+         false
       ]
    ],
-   "remoteCloseCode": null,
+   "remoteCloseCode": 1000,
    "remoteCloseReason": null,
    "reportCompressionRatio": false,
    "reportTime": false,
-   "result": "Actual events match at least one expected.",
-   "resultClose": "Connection was properly closed",
+   "result": "Actual events differ from any expected.",
+   "resultClose": "The connection was failed by the wrong endpoint",
    "rxFrameStats": {
-      "1": 1
+      "1": 2,
+      "8": 1
    },
    "rxOctetStats": {
-      "20": 1,
+      "4": 1,
+      "20": 2,
       "166": 1
    },
-   "started": "2021-07-29T07:05:11.379Z",
+   "started": "2021-07-30T08:44:02.713Z",
    "trafficStats": null,
    "txFrameStats": {
       "0": 2,
-      "1": 2
+      "1": 2,
+      "8": 1
    },
    "txOctetStats": {
       "15": 4,
+      "18": 1,
       "243": 1
    },
-   "wasClean": false,
+   "wasClean": true,
    "wasCloseHandshakeTimeout": false,
-   "wasNotCleanReason": "peer dropped the TCP connection without previous WebSocket closing handshake",
+   "wasNotCleanReason": null,
    "wasOpenHandshakeTimeout": false,
    "wasServerConnectionDropTimeout": false,
    "wirelog": [
@@ -82,7 +91,7 @@
          "RO",
          [
             166,
-            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a205468752c203239204a756c20323032312030373a30353a31 ..."
+            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a204672692c203330204a756c20323032312030383a34343a30 ..."
          ]
       ],
       [
@@ -94,7 +103,7 @@
          1,
          false,
          0,
-         "86174b1c",
+         "4647752c",
          null,
          null,
          false
@@ -103,7 +112,7 @@
          "TO",
          [
             15,
-            "018986174b1ce0652a7beb722568b7"
+            "01894647752c2035144b2b221b5877"
          ],
          false
       ],
@@ -116,7 +125,7 @@
          0,
          true,
          0,
-         "33cd3523",
+         "e961da7c",
          null,
          null,
          false
@@ -125,7 +134,7 @@
          "TO",
          [
             15,
-            "808933cd352355bf54445ea85b5701"
+            "8089e961da7c8f13bb1b8404b408db"
          ],
          false
       ],
@@ -138,7 +147,7 @@
          0,
          false,
          0,
-         "0f022b43",
+         "96bc59a7",
          null,
          null,
          false
@@ -147,7 +156,7 @@
          "TO",
          [
             15,
-            "00890f022b4369704a24626745373c"
+            "008996bc59a7f0ce38c0fbd937d3a5"
          ],
          false
       ],
@@ -160,7 +169,7 @@
          1,
          true,
          0,
-         "a7b41efb",
+         "912de68c",
          null,
          null,
          false
@@ -169,7 +178,7 @@
          "TO",
          [
             15,
-            "8189a7b41efbc1c67f9ccad1708f93"
+            "8189912de68cf75f87ebfc4888f8a5"
          ],
          false
       ],
@@ -191,6 +200,69 @@
             "fragment1fragment2"
          ],
          1,
+         true,
+         0,
+         false,
+         null
+      ],
+      [
+         "RO",
+         [
+            20,
+            "8112667261676d656e7433667261676d656e7434"
+         ]
+      ],
+      [
+         "RF",
+         [
+            18,
+            "fragment3fragment4"
+         ],
+         1,
+         true,
+         0,
+         false,
+         null
+      ],
+      [
+         "KLE"
+      ],
+      [
+         "TF",
+         [
+            12,
+            "0x03e9476f696e672041776179"
+         ],
+         8,
+         true,
+         0,
+         "a0a296ab",
+         null,
+         null,
+         false
+      ],
+      [
+         "TO",
+         [
+            18,
+            "888ca0a296aba34bd1c4c9ccf18be1d5f7d2"
+         ],
+         false
+      ],
+      [
+         "RO",
+         [
+            4,
+            "880203e8"
+         ]
+      ],
+      [
+         "RF",
+         [
+            2,
+            "0x03e8"
+         ],
+         8,
          true,
          0,
          false,
