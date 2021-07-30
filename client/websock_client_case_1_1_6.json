@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send text message message with payload of length 65535.",
    "droppedByMe": true,
-   "duration": 20,
+   "duration": 22,
    "expectation": "Receive echo'ed text message (with payload as sent). Clean close with normal code.",
    "expected": {
       "OK": [
@@ -27,8 +27,8 @@
       "requireClean": true
    },
    "failedByMe": false,
-   "httpRequest": "GET /runCase?case=6&agent=websock-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9001\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: Vrxm9vIQ4akLx876nySuPA==\r\nCache-Control: no-cache\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: c2Z5/toJq998mkecQbvIMHByn3k=\r\n\r\n",
+   "httpRequest": "GET /runCase?case=6&agent=websock-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9001\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: 4F0FttMmAin3v9rWwoXG2A==\r\nCache-Control: no-cache\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: TnD3D9f3azjGp7QbLvn/hpCGfIU=\r\n\r\n",
    "id": "1.1.6",
    "isServer": true,
    "localCloseCode": 1000,
@@ -56,7 +56,7 @@
       "286": 1,
       "65536": 1
    },
-   "started": "2021-07-30T15:41:24.450Z",
+   "started": "2021-07-30T16:50:53.694Z",
    "trafficStats": null,
    "txFrameStats": {
       "1": 1,
@@ -118,14 +118,14 @@
          "RO",
          [
             65536,
-            "81feffffc1803136ebaa1b1cebaa1b1cebaa1b1cebaa1b1cebaa1b1cebaa1b1cebaa1b1cebaa1b1cebaa1b1cebaa1b1cebaa1b1cebaa1b1cebaa1b1cebaa1b1c ..."
+            "81fefffff04dbe93da6794b9da6794b9da6794b9da6794b9da6794b9da6794b9da6794b9da6794b9da6794b9da6794b9da6794b9da6794b9da6794b9da6794b9 ..."
          ]
       ],
       [
          "RO",
          [
             7,
-            "ebaa1b1cebaa1b"
+            "da6794b9da6794"
          ]
       ],
       [
@@ -138,7 +138,7 @@
          true,
          0,
          true,
-         "c1803136"
+         "f04dbe93"
       ],
       [
          "TF",
@@ -166,7 +166,7 @@
          "RO",
          [
             8,
-            "88822f0797932cef"
+            "888233879b6c306f"
          ]
       ],
       [
@@ -179,7 +179,7 @@
          true,
          0,
          true,
-         "2f079793"
+         "33879b6c"
       ]
    ]
 }

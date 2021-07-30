@@ -202,7 +202,7 @@ pre.wirelog_tcp_closed_by_peer {color: #fff; margin: 0; background-color: #000; 
       <center><a href="http://autobahn.ws/testsuite" title="Autobahn WebSocket Testsuite"><img src="http://autobahn.ws/static/img/ws_protocol_test_report.png"          border="0" width="820" height="46" alt="Autobahn WebSocket Testsuite Report"></img></a></center>
       <center><a href="http://autobahn.ws"           title="Autobahn WebSocket">          <img src="http://autobahn.ws/static/img/ws_protocol_test_report_autobahn.png" border="0" width="300" height="68" alt="Autobahn WebSocket">                 </img></a></center>
       <br/>
-      <p class="case case_non_strict">websock secure server - <span style="font-size: 1.3em;"><b>Case 6.4.3</b></span> : Non-Strict - <span style="font-size: 0.9em;"><b>2003</b> ms @ 2021-07-30T15:41:10.706Z</a></p>
+      <p class="case case_non_strict">websock secure server - <span style="font-size: 1.3em;"><b>Case 6.4.3</b></span> : Non-Strict - <span style="font-size: 0.9em;"><b>2002</b> ms @ 2021-07-30T16:51:19.483Z</a></p>
       <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Same as Case 6.4.1, but we send message not in 3 frames, but in 3 chops of the same message frame.
 <br><br>MESSAGE PARTS:<br>
 PART1 = cebae1bdb9cf83cebcceb5<br>
@@ -226,13 +226,13 @@ Upgrade: WebSocket
 Connection: Upgrade
 Pragma: no-cache
 Cache-Control: no-cache
-Sec-WebSocket-Key: 88VxEPemFXkjRdxjgnDqEw==
+Sec-WebSocket-Key: gfKkQ4mtgPtMsY8N9q4NAw==
 Sec-WebSocket-Version: 13</pre>
       <pre class="http_dump">HTTP/1.1 101 Switching Protocols
-Date: Fri, 30 Jul 2021 15:41:10 GMT
+Date: Fri, 30 Jul 2021 16:51:19 GMT
 Upgrade: websocket
 Connection: Upgrade
-Sec-Websocket-Accept: YAx4nHBCvtYM9ZCJO/RwqyelQ6A=</pre>
+Sec-Websocket-Accept: hdcvqq6cnnGKSw09okB8nFq8vwg=</pre>
       <br/><hr/>
       <h2>Closing Behavior</h2>
       <table>
@@ -284,17 +284,17 @@ Sec-Websocket-Accept: YAx4nHBCvtYM9ZCJO/RwqyelQ6A=</pre>
          <pre class="wirelog_tx_octets">000 TX OCTETS: 474554202f77737320485454502f312e310d0a557365722d4167656e743a204175746f6261686e5465737453756974652f30</pre>
          <pre class="wirelog_tx_octets">               2e382e322d302e31302e390d0a48 ...</pre>
          <pre class="wirelog_rx_octets">001 RX OCTETS: 485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a204672692c203330204a75</pre>
-         <pre class="wirelog_rx_octets">               6c20323032312031353a34313a31 ...</pre>
-         <pre class="wirelog_tx_octets">002 TX OCTETS: 0195812b4fbc</pre>
-         <pre class="wirelog_tx_octets">003 TX OCTETS: 4f91ae0138e4cc723de5fa</pre>
+         <pre class="wirelog_rx_octets">               6c20323032312031363a35313a31 ...</pre>
+         <pre class="wirelog_tx_octets">002 TX OCTETS: 0195e7e56be7</pre>
+         <pre class="wirelog_tx_octets">003 TX OCTETS: 295f8a5a5e2ae8295b2bde</pre>
          <pre class="wirelog_delay">004 DELAY 1.000000 sec for TAG A</pre>
          <pre class="wirelog_delay">005 DELAY TIMEOUT on TAG A</pre>
-         <pre class="wirelog_tx_octets">006 TX OCTETS: 4811abcf</pre>
+         <pre class="wirelog_tx_octets">006 TX OCTETS: 137765eb</pre>
          <pre class="wirelog_delay">007 DELAY 1.000000 sec for TAG B</pre>
          <pre class="wirelog_delay">008 DELAY TIMEOUT on TAG B</pre>
-         <pre class="wirelog_tx_octets">009 TX OCTETS: d9e5423bd9e5</pre>
-         <pre class="wirelog_tx_frame">010 TX FRAME : OPCODE=0, FIN=True, RSV=0, PAYLOAD-LEN=0, MASK=345488d1, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
-         <pre class="wirelog_tx_octets">011 TX OCTETS: 8080345488d1</pre>
+         <pre class="wirelog_tx_octets">009 TX OCTETS: 82838c1f8283</pre>
+         <pre class="wirelog_tx_frame">010 TX FRAME : OPCODE=0, FIN=True, RSV=0, PAYLOAD-LEN=0, MASK=16642ba1, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">011 TX OCTETS: 808016642ba1</pre>
          <pre class="wirelog_kill_after">012 FAIL CONNECTION AFTER 1.000000 sec</pre>
          <pre class="wirelog_tcp_closed_by_peer">013 TCP DROPPED BY PEER</pre>
       </div>
