@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send 1000 compressed messages each of payload size 32768, auto-fragment to 256 octets. Use default permessage-deflate offer.",
    "droppedByMe": false,
-   "duration": 10046,
+   "duration": 9354,
    "expectation": "Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.",
    "expected": {},
    "expectedClose": {
@@ -19,8 +19,8 @@
       "requireClean": true
    },
    "failedByMe": false,
-   "httpRequest": "GET /wss HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8889\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: CaVnb3aOE6QHDeepH7Xvmg==\r\nSec-WebSocket-Extensions: permessage-deflate; client_no_context_takeover; client_max_window_bits\r\nSec-WebSocket-Version: 13\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Fri, 30 Jul 2021 16:58:42 GMT\r\nSec-Websocket-Extensions: permessage-deflate; client_no_context_takeover\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: pVC7T6RXo/vS7ohqgLPRNb/AOw0=\r\n\r\n",
+   "httpRequest": "GET /wss HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8889\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: 4LZ54JcubCuv3E/DCsSdGw==\r\nSec-WebSocket-Extensions: permessage-deflate; client_no_context_takeover; client_max_window_bits\r\nSec-WebSocket-Version: 13\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Fri, 30 Jul 2021 23:55:53 GMT\r\nSec-Websocket-Extensions: permessage-deflate; client_no_context_takeover\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: MBAo1jK5XbzwL0PlaZEaj0RL9xw=\r\n\r\n",
    "id": "12.2.13",
    "isServer": false,
    "localCloseCode": 1000,
@@ -741,7 +741,7 @@
       "12531": 1,
       "16384": 1000
    },
-   "started": "2021-07-30T16:58:42.434Z",
+   "started": "2021-07-30T23:55:53.090Z",
    "trafficStats": {
       "incomingCompressionRatio": 0.8505284423828126,
       "incomingOctetsAppLevel": 32768000,
@@ -1039,7 +1039,7 @@
          "RO",
          [
             240,
-            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a204672692c203330204a756c20323032312031363a35383a34 ..."
+            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a204672692c203330204a756c20323032312032333a35353a35 ..."
          ]
       ],
       [
@@ -1063,7 +1063,7 @@
          8,
          true,
          0,
-         "f10f3b4f",
+         "48becb73",
          null,
          null,
          false
@@ -1072,7 +1072,7 @@
          "TO",
          [
             8,
-            "8882f10f3b4ff2e7"
+            "888248becb734b56"
          ],
          false
       ],
