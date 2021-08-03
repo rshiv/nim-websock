@@ -202,7 +202,7 @@ pre.wirelog_tcp_closed_by_peer {color: #fff; margin: 0; background-color: #000; 
       <center><a href="http://autobahn.ws/testsuite" title="Autobahn WebSocket Testsuite"><img src="http://autobahn.ws/static/img/ws_protocol_test_report.png"          border="0" width="820" height="46" alt="Autobahn WebSocket Testsuite Report"></img></a></center>
       <center><a href="http://autobahn.ws"           title="Autobahn WebSocket">          <img src="http://autobahn.ws/static/img/ws_protocol_test_report_autobahn.png" border="0" width="300" height="68" alt="Autobahn WebSocket">                 </img></a></center>
       <br/>
-      <p class="case case_ok">websock server - <span style="font-size: 1.3em;"><b>Case 12.5.17</b></span> : Pass - <span style="font-size: 0.9em;"><b>13381</b> ms @ 2021-07-31T00:05:12.378Z</a></p>
+      <p class="case case_ok">websock server - <span style="font-size: 1.3em;"><b>Case 12.5.17</b></span> : Pass - <span style="font-size: 0.9em;"><b>15049</b> ms @ 2021-08-03T16:21:46.666Z</a></p>
       <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 compressed messages each of payload size 131072, auto-fragment to 4096 octets. Use default permessage-deflate offer.</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.</p>
 
@@ -221,15 +221,15 @@ Upgrade: WebSocket
 Connection: Upgrade
 Pragma: no-cache
 Cache-Control: no-cache
-Sec-WebSocket-Key: AsF6tsk8WSqbwRPnD8+bLg==
+Sec-WebSocket-Key: EcGJ2iu7il4m+j5IrOGMQA==
 Sec-WebSocket-Extensions: permessage-deflate; client_no_context_takeover; client_max_window_bits
 Sec-WebSocket-Version: 13</pre>
       <pre class="http_dump">HTTP/1.1 101 Switching Protocols
-Date: Sat, 31 Jul 2021 00:05:12 GMT
+Date: Tue, 03 Aug 2021 16:21:46 GMT
 Sec-Websocket-Extensions: permessage-deflate; client_no_context_takeover
 Upgrade: websocket
 Connection: Upgrade
-Sec-Websocket-Accept: 724LGVJrbFNkQ0v1mx3sjthtKzA=</pre>
+Sec-Websocket-Accept: eySslekDhlRWwqYfH+VichuWxpU=</pre>
       <br/><hr/>
       <h2>Closing Behavior</h2>
       <table>
@@ -450,7 +450,7 @@ Sec-Websocket-Accept: 724LGVJrbFNkQ0v1mx3sjthtKzA=</pre>
          <tr class="stats_row"><td>32298</td><td>1</td><td>32298</td></tr>
          <tr class="stats_row"><td>32374</td><td>1</td><td>32374</td></tr>
          <tr class="stats_row"><td>32446</td><td>1</td><td>32446</td></tr>
-         <tr class="stats_row"><td>33543</td><td>1</td><td>33543</td></tr>
+         <tr class="stats_row"><td>33490</td><td>1</td><td>33490</td></tr>
          <tr class="stats_row"><td>33629</td><td>1</td><td>33629</td></tr>
          <tr class="stats_row"><td>33712</td><td>1</td><td>33712</td></tr>
          <tr class="stats_row"><td>33830</td><td>1</td><td>33830</td></tr>
@@ -640,7 +640,7 @@ Sec-Websocket-Accept: 724LGVJrbFNkQ0v1mx3sjthtKzA=</pre>
          <tr class="stats_row"><td>54881</td><td>1</td><td>54881</td></tr>
          <tr class="stats_row"><td>54962</td><td>1</td><td>54962</td></tr>
          <tr class="stats_row"><td>54987</td><td>1</td><td>54987</td></tr>
-         <tr class="stats_row"><td>55117</td><td>1</td><td>55117</td></tr>
+         <tr class="stats_row"><td>55064</td><td>1</td><td>55064</td></tr>
          <tr class="stats_row"><td>55157</td><td>1</td><td>55157</td></tr>
          <tr class="stats_row"><td>55259</td><td>1</td><td>55259</td></tr>
          <tr class="stats_row"><td>55361</td><td>1</td><td>55361</td></tr>
@@ -727,7 +727,6 @@ Sec-Websocket-Accept: 724LGVJrbFNkQ0v1mx3sjthtKzA=</pre>
          <tr class="stats_row"><td>59676</td><td>1</td><td>59676</td></tr>
          <tr class="stats_row"><td>59678</td><td>2</td><td>119356</td></tr>
          <tr class="stats_row"><td>59679</td><td>1</td><td>59679</td></tr>
-         <tr class="stats_row"><td>59680</td><td>1</td><td>59680</td></tr>
          <tr class="stats_row"><td>59687</td><td>1</td><td>59687</td></tr>
          <tr class="stats_row"><td>59690</td><td>1</td><td>59690</td></tr>
          <tr class="stats_row"><td>59692</td><td>2</td><td>119384</td></tr>
@@ -738,6 +737,7 @@ Sec-Websocket-Accept: 724LGVJrbFNkQ0v1mx3sjthtKzA=</pre>
          <tr class="stats_row"><td>59713</td><td>1</td><td>59713</td></tr>
          <tr class="stats_row"><td>59717</td><td>2</td><td>119434</td></tr>
          <tr class="stats_row"><td>59718</td><td>1</td><td>59718</td></tr>
+         <tr class="stats_row"><td>59733</td><td>1</td><td>59733</td></tr>
          <tr class="stats_row"><td>59734</td><td>1</td><td>59734</td></tr>
          <tr class="stats_row"><td>59741</td><td>2</td><td>119482</td></tr>
          <tr class="stats_row"><td>59742</td><td>1</td><td>59742</td></tr>
@@ -764,6 +764,7 @@ Sec-Websocket-Accept: 724LGVJrbFNkQ0v1mx3sjthtKzA=</pre>
          <tr class="stats_row"><td>59904</td><td>1</td><td>59904</td></tr>
          <tr class="stats_row"><td>59906</td><td>1</td><td>59906</td></tr>
          <tr class="stats_row"><td>59910</td><td>1</td><td>59910</td></tr>
+         <tr class="stats_row"><td>59912</td><td>1</td><td>59912</td></tr>
          <tr class="stats_row"><td>59913</td><td>1</td><td>59913</td></tr>
          <tr class="stats_row"><td>59916</td><td>2</td><td>119832</td></tr>
          <tr class="stats_row"><td>59918</td><td>1</td><td>59918</td></tr>
@@ -777,7 +778,6 @@ Sec-Websocket-Accept: 724LGVJrbFNkQ0v1mx3sjthtKzA=</pre>
          <tr class="stats_row"><td>59954</td><td>1</td><td>59954</td></tr>
          <tr class="stats_row"><td>59956</td><td>1</td><td>59956</td></tr>
          <tr class="stats_row"><td>59957</td><td>1</td><td>59957</td></tr>
-         <tr class="stats_row"><td>59965</td><td>1</td><td>59965</td></tr>
          <tr class="stats_row"><td>59990</td><td>1</td><td>59990</td></tr>
          <tr class="stats_row"><td>59991</td><td>1</td><td>59991</td></tr>
          <tr class="stats_row"><td>59993</td><td>1</td><td>59993</td></tr>
@@ -1067,7 +1067,7 @@ Sec-Websocket-Accept: 724LGVJrbFNkQ0v1mx3sjthtKzA=</pre>
          <tr class="stats_row"><td>62530</td><td>1</td><td>62530</td></tr>
          <tr class="stats_row"><td>62531</td><td>2</td><td>125062</td></tr>
          <tr class="stats_row"><td>62534</td><td>1</td><td>62534</td></tr>
-         <tr class="stats_row"><td>62565</td><td>3</td><td>187695</td></tr>
+         <tr class="stats_row"><td>62565</td><td>4</td><td>250260</td></tr>
          <tr class="stats_row"><td>62566</td><td>1</td><td>62566</td></tr>
          <tr class="stats_row"><td>62567</td><td>1</td><td>62567</td></tr>
          <tr class="stats_row"><td>62602</td><td>2</td><td>125204</td></tr>
@@ -1077,7 +1077,7 @@ Sec-Websocket-Accept: 724LGVJrbFNkQ0v1mx3sjthtKzA=</pre>
          <tr class="stats_row"><td>62612</td><td>1</td><td>62612</td></tr>
          <tr class="stats_row"><td>62616</td><td>1</td><td>62616</td></tr>
          <tr class="stats_row"><td>62617</td><td>1</td><td>62617</td></tr>
-         <tr class="stats_row"><td>62618</td><td>2</td><td>125236</td></tr>
+         <tr class="stats_row"><td>62618</td><td>1</td><td>62618</td></tr>
          <tr class="stats_row"><td>62623</td><td>1</td><td>62623</td></tr>
          <tr class="stats_row"><td>62626</td><td>1</td><td>62626</td></tr>
          <tr class="stats_row"><td>62627</td><td>1</td><td>62627</td></tr>
@@ -1133,9 +1133,9 @@ Sec-Websocket-Accept: 724LGVJrbFNkQ0v1mx3sjthtKzA=</pre>
          <tr class="stats_row"><td>64919</td><td>1</td><td>64919</td></tr>
          <tr class="stats_row"><td>65278</td><td>1</td><td>65278</td></tr>
          <tr class="stats_row"><td>65374</td><td>1</td><td>65374</td></tr>
-         <tr class="stats_row"><td>65483</td><td>4</td><td>261932</td></tr>
+         <tr class="stats_row"><td>65483</td><td>1</td><td>65483</td></tr>
          <tr class="stats_row"><td>65488</td><td>1</td><td>65488</td></tr>
-         <tr class="stats_row"><td>65536</td><td>766</td><td>50200576</td></tr>
+         <tr class="stats_row"><td>65536</td><td>769</td><td>50397184</td></tr>
          <tr class="stats_total"><td>Total</td><td>1772</td><td>99528829</td></tr>
       </table>
       <h3>Octets Transmitted by Chop Size</h3>
@@ -1994,14 +1994,14 @@ Sec-Websocket-Accept: 724LGVJrbFNkQ0v1mx3sjthtKzA=</pre>
       <div id="wirelog">
          <pre class="wirelog_tx_octets">000 TX OCTETS: 474554202f777320485454502f312e310d0a557365722d4167656e743a204175746f6261686e5465737453756974652f302e</pre>
          <pre class="wirelog_tx_octets">               382e322d302e31302e390d0a486f ...</pre>
-         <pre class="wirelog_rx_octets">001 RX OCTETS: 485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a205361742c203331204a75</pre>
-         <pre class="wirelog_rx_octets">               6c20323032312030303a30353a31 ...</pre>
+         <pre class="wirelog_rx_octets">001 RX OCTETS: 485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a205475652c203033204175</pre>
+         <pre class="wirelog_rx_octets">               6720323032312031363a32313a34 ...</pre>
          <pre class="wirelog_delay">002 WIRELOG DISABLED</pre>
          <pre class="wirelog_kill_after">003 CLOSE CONNECTION AFTER 480.000000 sec</pre>
          <pre class="wirelog_delay">004 WIRELOG ENABLED</pre>
-         <pre class="wirelog_tx_frame">005 TX FRAME : OPCODE=8, FIN=True, RSV=0, PAYLOAD-LEN=2, MASK=2f76aafa, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_frame">005 TX FRAME : OPCODE=8, FIN=True, RSV=0, PAYLOAD-LEN=2, MASK=2fe20ff1, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               0x03e8</pre>
-         <pre class="wirelog_tx_octets">006 TX OCTETS: 88822f76aafa2c9e</pre>
+         <pre class="wirelog_tx_octets">006 TX OCTETS: 88822fe20ff12c0a</pre>
          <pre class="wirelog_rx_octets">007 RX OCTETS: 880203e8</pre>
          <pre class="wirelog_rx_frame">008 RX FRAME : OPCODE=8, FIN=True, RSV=0, PAYLOAD-LEN=2, MASKED=False, MASK=None</pre>
          <pre class="wirelog_rx_frame">               0x03e8</pre>

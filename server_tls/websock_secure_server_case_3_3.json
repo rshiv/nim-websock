@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send small text message, then send again with <b>RSV = 3</b>, then send Ping. Octets are sent in frame-wise chops. Octets are sent in octet-wise chops.",
    "droppedByMe": false,
-   "duration": 1,
+   "duration": 2,
    "expectation": "Echo for first message is received, but then connection is failed immediately, since RSV must be 0, when no extension defining RSV meaning has been negotiated. The Pong is not received.",
    "expected": {
       "NON-STRICT": [],
@@ -28,8 +28,8 @@
       "requireClean": false
    },
    "failedByMe": false,
-   "httpRequest": "GET /wss HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8889\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: 85H7RcHHBRoCZiU6NckC/w==\r\nSec-WebSocket-Version: 13\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Fri, 30 Jul 2021 23:48:53 GMT\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: 8A0tEhN7cmxV+A9qs96Y1GRdfZ0=\r\n\r\n",
+   "httpRequest": "GET /wss HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8889\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: DHQEhiaZM8lYSZb70lBOwg==\r\nSec-WebSocket-Version: 13\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Tue, 03 Aug 2021 16:04:33 GMT\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: fDl0Xh3nroNssvRAUn2nuCc3tS4=\r\n\r\n",
    "id": "3.3",
    "isServer": false,
    "localCloseCode": null,
@@ -54,7 +54,7 @@
       "15": 1,
       "166": 1
    },
-   "started": "2021-07-30T23:48:53.665Z",
+   "started": "2021-08-03T16:04:33.221Z",
    "trafficStats": null,
    "txFrameStats": {
       "1": 2,
@@ -83,7 +83,7 @@
          "RO",
          [
             166,
-            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a204672692c203330204a756c20323032312032333a34383a35 ..."
+            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a205475652c2030332041756720323032312031363a30343a33 ..."
          ]
       ],
       [
@@ -95,7 +95,7 @@
          1,
          true,
          0,
-         "a97970be",
+         "1523dcd5",
          null,
          null,
          true
@@ -104,7 +104,7 @@
          "TO",
          [
             19,
-            "818da97970bee11c1cd2c65550c9c60b1cda88"
+            "818d1523dcd55d46b0b97a0ffca27a51b0b134"
          ],
          true
       ],
@@ -117,7 +117,7 @@
          1,
          true,
          3,
-         "7fad0b61",
+         "ae4e4384",
          null,
          null,
          true
@@ -131,7 +131,7 @@
          9,
          true,
          0,
-         "0b2d2ae3",
+         "f297ce51",
          null,
          null,
          true
@@ -144,7 +144,7 @@
          "TO",
          [
             19,
-            "b18d7fad0b6137c8670d10812b1610df67055e"
+            "b18dae4e4384e62b2fe8c16263f3c13c2fe08f"
          ],
          true
       ],
@@ -152,7 +152,7 @@
          "TO",
          [
             6,
-            "89800b2d2ae3"
+            "8980f297ce51"
          ],
          true
       ],

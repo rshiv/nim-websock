@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send small text message, then send frame with reserved non-control <b>Opcode = 7</b> and non-empty payload, then send Ping.",
    "droppedByMe": false,
-   "duration": 3,
+   "duration": 2,
    "expectation": "Echo for first message is received, but then connection is failed immediately, since reserved opcode frame is used. A Pong is not received.",
    "expected": {
       "NON-STRICT": [],
@@ -28,8 +28,8 @@
       "requireClean": false
    },
    "failedByMe": false,
-   "httpRequest": "GET /runCase?case=39&agent=websock-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9001\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: soKBzU/np+OUDliJX7axrw==\r\nCache-Control: no-cache\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: iWgdLnkd6HhV2kaf/6peUxhEXpA=\r\n\r\n",
+   "httpRequest": "GET /runCase?case=39&agent=websock-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9001\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: Jy5prT0Fei0jIOBsMx1JVw==\r\nCache-Control: no-cache\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: huWMYnl/x23Kbsrc2YXzpUgIs3g=\r\n\r\n",
    "id": "4.1.5",
    "isServer": true,
    "localCloseCode": null,
@@ -54,7 +54,7 @@
       "19": 1,
       "287": 1
    },
-   "started": "2021-07-30T23:48:49.693Z",
+   "started": "2021-08-03T16:10:43.410Z",
    "trafficStats": null,
    "txFrameStats": {
       "1": 1,
@@ -280,7 +280,7 @@
          "RO",
          [
             19,
-            "818d40409e7d0825f2112f6cbe0a2f32f21961"
+            "818d50720e89181762e53f5e2efe3f0062ed71"
          ]
       ],
       [
@@ -293,7 +293,7 @@
          true,
          0,
          true,
-         "40409e7d"
+         "50720e89"
       ],
       [
          "TO",

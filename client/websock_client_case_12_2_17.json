@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send 1000 compressed messages each of payload size 131072, auto-fragment to 4096 octets. Use default permessage-deflate offer.",
    "droppedByMe": true,
-   "duration": 21346,
+   "duration": 25168,
    "expectation": "Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.",
    "expected": {},
    "expectedClose": {
@@ -19,8 +19,8 @@
       "requireClean": true
    },
    "failedByMe": false,
-   "httpRequest": "GET /runCase?case=336&agent=websock-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9001\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: T6G1Kkt2fjvM7Q/Sc+wDRw==\r\nCache-Control: no-cache\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: 5i+l3FVJYXAnYdsQMcUe9k1Ylbk=\r\nSec-WebSocket-Extensions: permessage-deflate\r\n\r\n",
+   "httpRequest": "GET /runCase?case=336&agent=websock-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9001\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: zXm0yuXIJgDbQQWaGcOacA==\r\nCache-Control: no-cache\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: F71J3y+3/LZe051TbbqRp4iH4D8=\r\nSec-WebSocket-Extensions: permessage-deflate\r\n\r\n",
    "id": "12.2.17",
    "isServer": true,
    "localCloseCode": 1000,
@@ -190,7 +190,7 @@
       "43115": 1,
       "43119": 1,
       "43121": 1,
-      "43127": 1,
+      "43127": 2,
       "43147": 1,
       "43149": 1,
       "43150": 1,
@@ -198,7 +198,6 @@
       "43157": 1,
       "43174": 1,
       "43177": 1,
-      "43180": 1,
       "43183": 1,
       "43190": 2,
       "43192": 2,
@@ -478,10 +477,11 @@
       "46266": 1,
       "46294": 1,
       "46309": 1,
+      "46322": 1,
       "46326": 1,
       "46372": 1,
       "46374": 1,
-      "46375": 2,
+      "46375": 1,
       "46409": 1,
       "46430": 1,
       "46431": 1,
@@ -537,8 +537,8 @@
       "47320": 1,
       "47351": 1,
       "47366": 1,
+      "47387": 1,
       "47427": 1,
-      "47440": 1,
       "47467": 1,
       "47497": 1,
       "47528": 1,
@@ -752,13 +752,13 @@
       "48855": 1,
       "48865": 1,
       "48869": 1,
-      "48889": 1,
       "48890": 1,
       "48895": 1,
       "48898": 1,
       "48925": 1,
       "48928": 1,
       "48941": 1,
+      "48942": 1,
       "48945": 1,
       "48949": 1,
       "48950": 1,
@@ -806,7 +806,7 @@
       "49036": 1,
       "49037": 4,
       "49038": 2,
-      "49039": 2,
+      "49039": 1,
       "49041": 2,
       "49043": 3,
       "49044": 1,
@@ -820,6 +820,7 @@
       "49053": 1,
       "49054": 1,
       "49056": 1,
+      "49061": 1,
       "49064": 2,
       "49065": 1,
       "49066": 1,
@@ -838,7 +839,7 @@
       "49084": 1,
       "49089": 2,
       "49090": 2,
-      "49092": 2,
+      "49092": 3,
       "49093": 2,
       "49096": 2,
       "49098": 1,
@@ -848,14 +849,14 @@
       "49104": 1,
       "49108": 1,
       "49111": 1,
-      "49114": 2,
+      "49114": 1,
       "49117": 2,
       "49120": 1,
       "49230": 1,
-      "65483": 4,
-      "65536": 996
+      "65483": 2,
+      "65536": 998
    },
-   "started": "2021-07-30T23:57:04.144Z",
+   "started": "2021-08-03T16:19:47.058Z",
    "trafficStats": {
       "incomingCompressionRatio": 0.8504757537841797,
       "incomingOctetsAppLevel": 131072000,
@@ -1729,7 +1730,7 @@
          "RO",
          [
             8,
-            "888286d161768539"
+            "888283fdf7c68015"
          ]
       ],
       [
@@ -1742,7 +1743,7 @@
          true,
          0,
          true,
-         "86d16176"
+         "83fdf7c6"
       ]
    ]
 }
