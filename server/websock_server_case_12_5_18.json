@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send 1000 compressed messages each of payload size 131072, auto-fragment to 32768 octets. Use default permessage-deflate offer.",
    "droppedByMe": false,
-   "duration": 14625,
+   "duration": 13633,
    "expectation": "Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.",
    "expected": {},
    "expectedClose": {
@@ -19,8 +19,8 @@
       "requireClean": true
    },
    "failedByMe": false,
-   "httpRequest": "GET /ws HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8888\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: EzmqQZlXmDcdWUwTHk6Nqw==\r\nSec-WebSocket-Extensions: permessage-deflate; client_no_context_takeover; client_max_window_bits\r\nSec-WebSocket-Version: 13\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Tue, 03 Aug 2021 16:22:01 GMT\r\nSec-Websocket-Extensions: permessage-deflate; client_no_context_takeover\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: xKurJmMIDbox9ukH0QMnUr99gkU=\r\n\r\n",
+   "httpRequest": "GET /ws HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8888\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: rh0DfNATJNbquBEOt32p1Q==\r\nSec-WebSocket-Extensions: permessage-deflate; client_no_context_takeover; client_max_window_bits\r\nSec-WebSocket-Version: 13\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Wed, 04 Aug 2021 16:49:22 GMT\r\nSec-Websocket-Extensions: permessage-deflate; client_no_context_takeover\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: ofv+IvdxaHMPl9kjYLo0sRT4L3g=\r\n\r\n",
    "id": "12.5.18",
    "isServer": false,
    "localCloseCode": 1000,
@@ -154,7 +154,7 @@
       "19560": 1,
       "19586": 2,
       "20222": 1,
-      "20357": 1,
+      "20410": 1,
       "20492": 1,
       "20628": 1,
       "20737": 1,
@@ -503,7 +503,7 @@
       "59651": 1,
       "59656": 2,
       "59657": 2,
-      "59659": 2,
+      "59659": 1,
       "59660": 1,
       "59661": 1,
       "59667": 1,
@@ -519,14 +519,14 @@
       "59693": 1,
       "59698": 1,
       "59709": 2,
-      "59712": 1,
+      "59712": 2,
       "59713": 1,
       "59717": 2,
       "59718": 1,
       "59734": 1,
       "59741": 2,
       "59742": 1,
-      "59744": 2,
+      "59744": 1,
       "59750": 1,
       "59763": 1,
       "59764": 1,
@@ -534,6 +534,7 @@
       "59767": 1,
       "59784": 1,
       "59793": 2,
+      "59797": 1,
       "59826": 1,
       "59833": 1,
       "59869": 2,
@@ -594,7 +595,7 @@
       "60149": 2,
       "60150": 1,
       "60152": 1,
-      "60154": 2,
+      "60154": 1,
       "60155": 2,
       "60159": 1,
       "60171": 2,
@@ -617,7 +618,7 @@
       "60203": 1,
       "60205": 1,
       "60206": 2,
-      "60207": 1,
+      "60207": 2,
       "60212": 1,
       "60217": 1,
       "60218": 1,
@@ -918,10 +919,11 @@
       "64919": 1,
       "65278": 1,
       "65374": 1,
+      "65483": 4,
       "65488": 1,
-      "65536": 770
+      "65536": 766
    },
-   "started": "2021-08-03T16:22:01.717Z",
+   "started": "2021-08-04T16:49:22.008Z",
    "trafficStats": {
       "incomingCompressionRatio": 0.7592770767211914,
       "incomingOctetsAppLevel": 131072000,
@@ -1859,7 +1861,7 @@
          "RO",
          [
             240,
-            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a205475652c2030332041756720323032312031363a32323a30 ..."
+            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a205765642c2030342041756720323032312031363a34393a32 ..."
          ]
       ],
       [
@@ -1883,7 +1885,7 @@
          8,
          true,
          0,
-         "3692e0aa",
+         "66332ce2",
          null,
          null,
          false
@@ -1892,7 +1894,7 @@
          "TO",
          [
             8,
-            "88823692e0aa357a"
+            "888266332ce265db"
          ],
          false
       ],

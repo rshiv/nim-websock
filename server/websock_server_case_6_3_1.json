@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send invalid UTF-8 text message unfragmented.<br><br>MESSAGE:<br>cebae1bdb9cf83cebcceb5eda080656469746564",
    "droppedByMe": false,
-   "duration": 0,
+   "duration": 1,
    "expectation": "The connection is failed immediately, since the payload is not valid UTF-8.",
    "expected": {
       "OK": []
@@ -22,8 +22,8 @@
       "requireClean": false
    },
    "failedByMe": false,
-   "httpRequest": "GET /ws HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8888\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: 2t+hXrqviJk9+4SJmCvNGg==\r\nSec-WebSocket-Version: 13\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Tue, 03 Aug 2021 16:02:35 GMT\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: zKED84Ie2x6Ax8QZgH4ZeF09OCs=\r\n\r\n",
+   "httpRequest": "GET /ws HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8888\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: 4wyg9gpa6ZyvFC6dwsRnDA==\r\nSec-WebSocket-Version: 13\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Wed, 04 Aug 2021 16:31:12 GMT\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: 2JWYX6yzLl2zecQKpvNY+eCrqP4=\r\n\r\n",
    "id": "6.3.1",
    "isServer": false,
    "localCloseCode": null,
@@ -39,7 +39,7 @@
    "rxOctetStats": {
       "166": 1
    },
-   "started": "2021-08-03T16:02:35.689Z",
+   "started": "2021-08-04T16:31:12.114Z",
    "trafficStats": null,
    "txFrameStats": {
       "1": 1
@@ -66,7 +66,7 @@
          "RO",
          [
             166,
-            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a205475652c2030332041756720323032312031363a30323a33 ..."
+            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a205765642c2030342041756720323032312031363a33313a31 ..."
          ]
       ],
       [
@@ -78,7 +78,7 @@
          1,
          true,
          0,
-         "1b2bc98b",
+         "3c1ac6be",
          null,
          null,
          false
@@ -87,7 +87,7 @@
          "TO",
          [
             26,
-            "81941b2bc98bd5912836a2e44a45a7e57c66bbabacef725facef"
+            "81943c1ac6bef2a0270385d5457080d473539c9aa3da556ea3da"
          ],
          false
       ],

@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send binary message message with payload of length 16 * 2**20 (16M).",
    "droppedByMe": true,
-   "duration": 468,
+   "duration": 474,
    "expectation": "Receive echo'ed binary message (with payload as sent).",
    "expected": {},
    "expectedClose": {
@@ -19,8 +19,8 @@
       "requireClean": true
    },
    "failedByMe": false,
-   "httpRequest": "GET /runCase?case=258&agent=websock-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9001\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: f7mvAuFcRb5XN6rN5nT4WQ==\r\nCache-Control: no-cache\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: sVPZd+25S/LaHfSQQXQxmpai4Q8=\r\n\r\n",
+   "httpRequest": "GET /runCase?case=258&agent=websock-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9001\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: sp62GdiVcSe3ChBz6SP6Mw==\r\nCache-Control: no-cache\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: Y0T2s9H2pdQIK2wbqkjHX77FcO0=\r\n\r\n",
    "id": "9.2.6",
    "isServer": true,
    "localCloseCode": 1000,
@@ -39,11 +39,15 @@
    },
    "rxOctetStats": {
       "8": 1,
-      "224": 1,
+      "28": 1,
+      "67": 1,
+      "109": 1,
+      "126": 1,
       "288": 1,
-      "65536": 256
+      "65483": 2,
+      "65536": 254
    },
-   "started": "2021-08-03T16:11:05.641Z",
+   "started": "2021-08-04T16:32:06.263Z",
    "trafficStats": null,
    "txFrameStats": {
       "2": 1,
@@ -105,7 +109,7 @@
          "RO",
          [
             8,
-            "8882a134a56ca2dc"
+            "88822aed92e52905"
          ]
       ],
       [
@@ -118,7 +122,7 @@
          true,
          0,
          true,
-         "a134a56c"
+         "2aed92e5"
       ]
    ]
 }
