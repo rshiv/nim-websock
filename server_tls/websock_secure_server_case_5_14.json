@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send unfragmented Text Message after Continuation Frame with FIN = false, where there is nothing to continue, sent in octet-wise chops.",
    "droppedByMe": false,
-   "duration": 1,
+   "duration": 2,
    "expectation": "The connection is failed immediately, since there is no message to continue.",
    "expected": {
       "OK": []
@@ -21,8 +21,8 @@
       "requireClean": false
    },
    "failedByMe": false,
-   "httpRequest": "GET /wss HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8889\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: 1b9YF1oL/h2ycWyEmTfw5g==\r\nSec-WebSocket-Version: 13\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Wed, 04 Aug 2021 16:31:03 GMT\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: LrYGeuTumMnMDG8+q9Uki+dgFrE=\r\n\r\n",
+   "httpRequest": "GET /wss HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8889\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: r6g5Q8mF7FWT3Z2ayI+YaQ==\r\nSec-WebSocket-Version: 13\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Tue, 31 Aug 2021 11:58:43 GMT\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: poirArgqEApIUPpOF2wez69LqBs=\r\n\r\n",
    "id": "5.14",
    "isServer": false,
    "localCloseCode": null,
@@ -38,7 +38,7 @@
    "rxOctetStats": {
       "166": 1
    },
-   "started": "2021-08-04T16:31:03.358Z",
+   "started": "2021-08-31T11:58:43.517Z",
    "trafficStats": null,
    "txFrameStats": {
       "0": 1,
@@ -66,7 +66,7 @@
          "RO",
          [
             166,
-            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a205765642c2030342041756720323032312031363a33313a30 ..."
+            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a205475652c2033312041756720323032312031313a35383a34 ..."
          ]
       ],
       [
@@ -78,7 +78,7 @@
          0,
          false,
          0,
-         "c8427b0e",
+         "6251b759",
          null,
          1,
          false
@@ -100,7 +100,7 @@
          1,
          true,
          0,
-         "dcb2a446",
+         "39bad698",
          null,
          1,
          false
@@ -121,7 +121,7 @@
          "TO",
          [
             1,
-            "c8"
+            "62"
          ],
          true
       ],
@@ -129,7 +129,7 @@
          "TO",
          [
             1,
-            "42"
+            "51"
          ],
          true
       ],
@@ -137,7 +137,7 @@
          "TO",
          [
             1,
-            "7b"
+            "b7"
          ],
          true
       ],
@@ -145,7 +145,7 @@
          "TO",
          [
             1,
-            "0e"
+            "59"
          ],
          true
       ],
@@ -153,7 +153,7 @@
          "TO",
          [
             1,
-            "a6"
+            "0c"
          ],
          true
       ],
@@ -161,7 +161,7 @@
          "TO",
          [
             1,
-            "2d"
+            "3e"
          ],
          true
       ]

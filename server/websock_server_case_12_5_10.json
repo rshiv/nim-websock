@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send 1000 compressed messages each of payload size 131072, auto-fragment to 0 octets. Use default permessage-deflate offer.",
    "droppedByMe": false,
-   "duration": 13543,
+   "duration": 12434,
    "expectation": "Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.",
    "expected": {},
    "expectedClose": {
@@ -19,8 +19,8 @@
       "requireClean": true
    },
    "failedByMe": false,
-   "httpRequest": "GET /ws HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8888\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: nIVpTyKeb0IDHuc8XQ4ipg==\r\nSec-WebSocket-Extensions: permessage-deflate; client_no_context_takeover; client_max_window_bits\r\nSec-WebSocket-Version: 13\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Wed, 04 Aug 2021 16:47:54 GMT\r\nSec-Websocket-Extensions: permessage-deflate; client_no_context_takeover\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: tjZDFw2mLzO6NJHLeLBbfGhF6sA=\r\n\r\n",
+   "httpRequest": "GET /ws HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8888\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: RWYrPKjoLeMrgjhIva6bQA==\r\nSec-WebSocket-Extensions: permessage-deflate; client_no_context_takeover; client_max_window_bits\r\nSec-WebSocket-Version: 13\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Tue, 31 Aug 2021 12:11:43 GMT\r\nSec-Websocket-Extensions: permessage-deflate; client_no_context_takeover\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: x1N+bWNpbDYBR4+ro9AJyFVT2h0=\r\n\r\n",
    "id": "12.5.10",
    "isServer": false,
    "localCloseCode": 1000,
@@ -277,9 +277,9 @@
       "40221": 1,
       "40227": 1,
       "40228": 1,
-      "40230": 1,
       "40254": 1,
       "40273": 1,
+      "40283": 1,
       "40364": 1,
       "40465": 1,
       "41289": 1,
@@ -504,13 +504,13 @@
       "59656": 2,
       "59657": 2,
       "59659": 2,
-      "59660": 1,
       "59661": 1,
       "59667": 1,
       "59673": 2,
       "59675": 1,
       "59676": 1,
       "59678": 2,
+      "59679": 1,
       "59680": 1,
       "59687": 1,
       "59690": 1,
@@ -519,10 +519,9 @@
       "59698": 1,
       "59709": 2,
       "59712": 1,
-      "59713": 1,
+      "59713": 2,
       "59717": 2,
       "59718": 1,
-      "59732": 1,
       "59734": 1,
       "59741": 2,
       "59742": 1,
@@ -758,7 +757,6 @@
       "61665": 1,
       "61668": 1,
       "61670": 2,
-      "61674": 1,
       "61680": 1,
       "61681": 1,
       "61683": 1,
@@ -766,6 +764,7 @@
       "61689": 1,
       "61692": 1,
       "61696": 1,
+      "61727": 1,
       "61741": 1,
       "61756": 1,
       "61759": 1,
@@ -786,6 +785,7 @@
       "61983": 1,
       "61985": 2,
       "61989": 2,
+      "62007": 1,
       "62032": 1,
       "62036": 1,
       "62038": 2,
@@ -794,7 +794,6 @@
       "62049": 1,
       "62054": 1,
       "62056": 1,
-      "62060": 1,
       "62071": 2,
       "62075": 1,
       "62099": 1,
@@ -918,11 +917,11 @@
       "64919": 1,
       "65278": 1,
       "65374": 1,
-      "65483": 2,
+      "65483": 3,
       "65488": 1,
-      "65536": 768
+      "65536": 767
    },
-   "started": "2021-08-04T16:47:54.894Z",
+   "started": "2021-08-31T12:11:43.191Z",
    "trafficStats": {
       "incomingCompressionRatio": 0.7592770767211914,
       "incomingOctetsAppLevel": 131072000,
@@ -1866,7 +1865,7 @@
          "RO",
          [
             240,
-            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a205765642c2030342041756720323032312031363a34373a35 ..."
+            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a205475652c2033312041756720323032312031323a31313a34 ..."
          ]
       ],
       [
@@ -1890,7 +1889,7 @@
          8,
          true,
          0,
-         "91e650d0",
+         "02048168",
          null,
          null,
          false
@@ -1899,7 +1898,7 @@
          "TO",
          [
             8,
-            "888291e650d0920e"
+            "88820204816801ec"
          ],
          false
       ],

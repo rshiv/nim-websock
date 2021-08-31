@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send 1000 compressed messages each of payload size 131072, auto-fragment to 32768 octets. Use default permessage-deflate offer.",
    "droppedByMe": false,
-   "duration": 13633,
+   "duration": 12500,
    "expectation": "Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.",
    "expected": {},
    "expectedClose": {
@@ -19,8 +19,8 @@
       "requireClean": true
    },
    "failedByMe": false,
-   "httpRequest": "GET /ws HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8888\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: rh0DfNATJNbquBEOt32p1Q==\r\nSec-WebSocket-Extensions: permessage-deflate; client_no_context_takeover; client_max_window_bits\r\nSec-WebSocket-Version: 13\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Wed, 04 Aug 2021 16:49:22 GMT\r\nSec-Websocket-Extensions: permessage-deflate; client_no_context_takeover\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: ofv+IvdxaHMPl9kjYLo0sRT4L3g=\r\n\r\n",
+   "httpRequest": "GET /ws HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8888\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: XhgJZn2QKmGJI7IhbZAPLQ==\r\nSec-WebSocket-Extensions: permessage-deflate; client_no_context_takeover; client_max_window_bits\r\nSec-WebSocket-Version: 13\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Tue, 31 Aug 2021 12:13:03 GMT\r\nSec-Websocket-Extensions: permessage-deflate; client_no_context_takeover\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: vucfJJw08ThqwCnj2EVq/JG92Kg=\r\n\r\n",
    "id": "12.5.18",
    "isServer": false,
    "localCloseCode": 1000,
@@ -154,7 +154,7 @@
       "19560": 1,
       "19586": 2,
       "20222": 1,
-      "20410": 1,
+      "20357": 1,
       "20492": 1,
       "20628": 1,
       "20737": 1,
@@ -503,7 +503,7 @@
       "59651": 1,
       "59656": 2,
       "59657": 2,
-      "59659": 1,
+      "59659": 2,
       "59660": 1,
       "59661": 1,
       "59667": 1,
@@ -519,14 +519,14 @@
       "59693": 1,
       "59698": 1,
       "59709": 2,
-      "59712": 2,
+      "59712": 1,
       "59713": 1,
       "59717": 2,
       "59718": 1,
       "59734": 1,
       "59741": 2,
       "59742": 1,
-      "59744": 1,
+      "59744": 2,
       "59750": 1,
       "59763": 1,
       "59764": 1,
@@ -534,7 +534,6 @@
       "59767": 1,
       "59784": 1,
       "59793": 2,
-      "59797": 1,
       "59826": 1,
       "59833": 1,
       "59869": 2,
@@ -595,7 +594,7 @@
       "60149": 2,
       "60150": 1,
       "60152": 1,
-      "60154": 1,
+      "60154": 2,
       "60155": 2,
       "60159": 1,
       "60171": 2,
@@ -618,7 +617,7 @@
       "60203": 1,
       "60205": 1,
       "60206": 2,
-      "60207": 2,
+      "60207": 1,
       "60212": 1,
       "60217": 1,
       "60218": 1,
@@ -919,11 +918,10 @@
       "64919": 1,
       "65278": 1,
       "65374": 1,
-      "65483": 4,
       "65488": 1,
-      "65536": 766
+      "65536": 770
    },
-   "started": "2021-08-04T16:49:22.008Z",
+   "started": "2021-08-31T12:13:03.506Z",
    "trafficStats": {
       "incomingCompressionRatio": 0.7592770767211914,
       "incomingOctetsAppLevel": 131072000,
@@ -1861,7 +1859,7 @@
          "RO",
          [
             240,
-            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a205765642c2030342041756720323032312031363a34393a32 ..."
+            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a205475652c2033312041756720323032312031323a31333a30 ..."
          ]
       ],
       [
@@ -1885,7 +1883,7 @@
          8,
          true,
          0,
-         "66332ce2",
+         "316d5913",
          null,
          null,
          false
@@ -1894,7 +1892,7 @@
          "TO",
          [
             8,
-            "888266332ce265db"
+            "8882316d59133285"
          ],
          false
       ],
