@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send small text message, then send again with <b>RSV = 4</b>, then send Ping. Octets are sent in octet-wise chops.",
    "droppedByMe": false,
-   "duration": 2,
+   "duration": 4,
    "expectation": "Echo for first message is received, but then connection is failed immediately, since RSV must be 0, when no extension defining RSV meaning has been negotiated. The Pong is not received.",
    "expected": {
       "NON-STRICT": [],
@@ -28,8 +28,8 @@
       "requireClean": false
    },
    "failedByMe": false,
-   "httpRequest": "GET /wss HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8889\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: WULZF/G78RiLVt38sP6FUw==\r\nSec-WebSocket-Version: 13\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Tue, 31 Aug 2021 14:46:04 GMT\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: xjktlyRyR9oDRYwdbvI5VWq/yfY=\r\n\r\n",
+   "httpRequest": "GET /wss HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8889\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: Eeki39oPrm1uKcUKaJOdcg==\r\nSec-WebSocket-Version: 13\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Tue, 14 Sep 2021 11:22:07 GMT\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: Zq8El4s0j9Qa+L3FsG18NtMEvhg=\r\n\r\n",
    "id": "3.4",
    "isServer": false,
    "localCloseCode": null,
@@ -54,7 +54,7 @@
       "15": 1,
       "166": 1
    },
-   "started": "2021-08-31T14:46:04.197Z",
+   "started": "2021-09-14T11:22:07.627Z",
    "trafficStats": null,
    "txFrameStats": {
       "1": 2,
@@ -82,7 +82,7 @@
          "RO",
          [
             166,
-            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a205475652c2033312041756720323032312031343a34363a30 ..."
+            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a205475652c2031342053657020323032312031313a32323a30 ..."
          ]
       ],
       [
@@ -94,7 +94,7 @@
          1,
          true,
          0,
-         "e8beaadc",
+         "e23f2c90",
          null,
          1,
          false
@@ -116,7 +116,7 @@
          1,
          true,
          4,
-         "97c0fd9d",
+         "36d9fb18",
          null,
          1,
          false
@@ -130,7 +130,7 @@
          9,
          true,
          0,
-         "ad3a4db0",
+         "46e22862",
          null,
          1,
          false
@@ -151,7 +151,7 @@
          "TO",
          [
             1,
-            "e8"
+            "e2"
          ],
          true
       ],
@@ -159,7 +159,23 @@
          "TO",
          [
             1,
-            "be"
+            "3f"
+         ],
+         true
+      ],
+      [
+         "TO",
+         [
+            1,
+            "2c"
+         ],
+         true
+      ],
+      [
+         "TO",
+         [
+            1,
+            "90"
          ],
          true
       ],
@@ -175,7 +191,7 @@
          "TO",
          [
             1,
-            "dc"
+            "5a"
          ],
          true
       ],
@@ -183,7 +199,7 @@
          "TO",
          [
             1,
-            "a0"
+            "40"
          ],
          true
       ],
@@ -191,7 +207,7 @@
          "TO",
          [
             1,
-            "db"
+            "fc"
          ],
          true
       ],
@@ -199,7 +215,7 @@
          "TO",
          [
             1,
-            "c6"
+            "8d"
          ],
          true
       ],
@@ -207,7 +223,7 @@
          "TO",
          [
             1,
-            "b0"
+            "13"
          ],
          true
       ],
@@ -215,7 +231,7 @@
          "TO",
          [
             1,
-            "87"
+            "0c"
          ],
          true
       ],
@@ -223,7 +239,7 @@
          "TO",
          [
             1,
-            "92"
+            "e7"
          ],
          true
       ],
@@ -231,7 +247,7 @@
          "TO",
          [
             1,
-            "8a"
+            "8d"
          ],
          true
       ],
@@ -239,7 +255,7 @@
          "TO",
          [
             1,
-            "ab"
+            "4d"
          ],
          true
       ],
@@ -247,7 +263,7 @@
          "TO",
          [
             1,
-            "87"
+            "40"
          ],
          true
       ],
@@ -255,7 +271,7 @@
          "TO",
          [
             1,
-            "cc"
+            "f4"
          ],
          true
       ],
@@ -263,23 +279,7 @@
          "TO",
          [
             1,
-            "c6"
-         ],
-         true
-      ],
-      [
-         "TO",
-         [
-            1,
-            "b8"
-         ],
-         true
-      ],
-      [
-         "TO",
-         [
-            1,
-            "c9"
+            "c3"
          ],
          true
       ],
@@ -296,14 +296,6 @@
          [
             1,
             "8d"
-         ],
-         true
-      ],
-      [
-         "TO",
-         [
-            1,
-            "97"
          ],
          true
       ],
@@ -330,7 +322,7 @@
          "TO",
          [
             1,
-            "c0"
+            "36"
          ],
          true
       ],
@@ -338,7 +330,7 @@
          "TO",
          [
             1,
-            "fd"
+            "d9"
          ],
          true
       ],
@@ -346,7 +338,7 @@
          "TO",
          [
             1,
-            "9d"
+            "fb"
          ],
          true
       ],
@@ -354,7 +346,15 @@
          "TO",
          [
             1,
-            "df"
+            "18"
+         ],
+         true
+      ],
+      [
+         "TO",
+         [
+            1,
+            "7e"
          ],
          true
       ]
