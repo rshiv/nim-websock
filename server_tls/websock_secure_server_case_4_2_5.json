@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send small text message, then send frame with reserved control <b>Opcode = 15</b> and non-empty payload, then send Ping.",
    "droppedByMe": false,
-   "duration": 2,
+   "duration": 3,
    "expectation": "Echo for first message is received, but then connection is failed immediately, since reserved opcode frame is used. A Pong is not received.",
    "expected": {
       "NON-STRICT": [],
@@ -28,8 +28,8 @@
       "requireClean": false
    },
    "failedByMe": false,
-   "httpRequest": "GET /wss HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8889\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: Bpwuxje9f/Yo8o1txUJCYA==\r\nSec-WebSocket-Version: 13\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Tue, 21 Sep 2021 09:23:48 GMT\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: qXJvAhHo9+aFfRH2eKAm7BQDAHA=\r\n\r\n",
+   "httpRequest": "GET /wss HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8889\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: VRbopYtVkz8Fa5DkG8re6g==\r\nSec-WebSocket-Version: 13\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Thu, 23 Sep 2021 11:49:34 GMT\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: vHX6LVfvcVsKQmmOhFLAynuaaUU=\r\n\r\n",
    "id": "4.2.5",
    "isServer": false,
    "localCloseCode": null,
@@ -54,7 +54,7 @@
       "15": 1,
       "166": 1
    },
-   "started": "2021-09-21T09:23:48.687Z",
+   "started": "2021-09-23T11:49:34.924Z",
    "trafficStats": null,
    "txFrameStats": {
       "1": 1,
@@ -83,7 +83,7 @@
          "RO",
          [
             166,
-            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a205475652c2032312053657020323032312030393a32333a34 ..."
+            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a205468752c2032332053657020323032312031313a34393a33 ..."
          ]
       ],
       [
@@ -95,7 +95,7 @@
          1,
          true,
          0,
-         "387d98b3",
+         "cd571ff4",
          null,
          1,
          false
@@ -117,7 +117,7 @@
          15,
          true,
          0,
-         "477afeb3",
+         "654baeea",
          null,
          1,
          false
@@ -131,7 +131,7 @@
          9,
          true,
          0,
-         "886be314",
+         "4a62f7e8",
          null,
          1,
          false
@@ -152,7 +152,7 @@
          "TO",
          [
             1,
-            "38"
+            "cd"
          ],
          true
       ],
@@ -160,7 +160,47 @@
          "TO",
          [
             1,
-            "7d"
+            "57"
+         ],
+         true
+      ],
+      [
+         "TO",
+         [
+            1,
+            "1f"
+         ],
+         true
+      ],
+      [
+         "TO",
+         [
+            1,
+            "f4"
+         ],
+         true
+      ],
+      [
+         "TO",
+         [
+            1,
+            "85"
+         ],
+         true
+      ],
+      [
+         "TO",
+         [
+            1,
+            "32"
+         ],
+         true
+      ],
+      [
+         "TO",
+         [
+            1,
+            "73"
          ],
          true
       ],
@@ -176,7 +216,7 @@
          "TO",
          [
             1,
-            "b3"
+            "a2"
          ],
          true
       ],
@@ -184,7 +224,7 @@
          "TO",
          [
             1,
-            "70"
+            "7b"
          ],
          true
       ],
@@ -192,7 +232,7 @@
          "TO",
          [
             1,
-            "18"
+            "3f"
          ],
          true
       ],
@@ -200,7 +240,7 @@
          "TO",
          [
             1,
-            "f4"
+            "83"
          ],
          true
       ],
@@ -208,7 +248,7 @@
          "TO",
          [
             1,
-            "df"
+            "a2"
          ],
          true
       ],
@@ -216,7 +256,7 @@
          "TO",
          [
             1,
-            "57"
+            "25"
          ],
          true
       ],
@@ -224,7 +264,7 @@
          "TO",
          [
             1,
-            "51"
+            "73"
          ],
          true
       ],
@@ -232,7 +272,7 @@
          "TO",
          [
             1,
-            "b8"
+            "90"
          ],
          true
       ],
@@ -240,47 +280,7 @@
          "TO",
          [
             1,
-            "c4"
-         ],
-         true
-      ],
-      [
-         "TO",
-         [
-            1,
-            "57"
-         ],
-         true
-      ],
-      [
-         "TO",
-         [
-            1,
-            "0f"
-         ],
-         true
-      ],
-      [
-         "TO",
-         [
-            1,
-            "f4"
-         ],
-         true
-      ],
-      [
-         "TO",
-         [
-            1,
-            "d7"
-         ],
-         true
-      ],
-      [
-         "TO",
-         [
-            1,
-            "19"
+            "ec"
          ],
          true
       ],
@@ -304,7 +304,7 @@
          "TO",
          [
             1,
-            "47"
+            "65"
          ],
          true
       ],
@@ -331,7 +331,7 @@
          "TO",
          [
             1,
-            "7a"
+            "4b"
          ],
          true
       ]
